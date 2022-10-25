@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#11AA5757">
+
+    <TextView
+        android:id="@+id/txt_rank_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/nothing"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_username_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/nothing"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_rank_num"
+        app:layout_constraintStart_toEndOf="@+id/txt_rank_num"
+        app:layout_constraintTop_toTopOf="@+id/txt_rank_num" />
+
+    <ImageView
+        android:id="@+id/coin_icon_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_username_leaderboard"
+        app:layout_constraintStart_toEndOf="@+id/txt_username_leaderboard"
+        app:layout_constraintTop_toTopOf="@+id/txt_username_leaderboard"
+        app:srcCompat="@drawable/coin_leaderboard" />
+
+    <TextView
+        android:id="@+id/coin_amount_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/nothing"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_icon_leaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coin_icon_leaderboard"
+        app:layout_constraintTop_toTopOf="@+id/coin_icon_leaderboard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
