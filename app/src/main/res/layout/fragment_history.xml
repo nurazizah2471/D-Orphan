@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgorund_history_gradient"
     android:elevation="8dp"
-    tools:context=".Views.Fragments.HistoryFragment">
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.HistoryFragment">
 
     <ScrollView
         android:id="@+id/scrollViewHistory"

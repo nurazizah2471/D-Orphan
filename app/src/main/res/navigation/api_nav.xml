@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/api_nav"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_berandaFragment2"
+            app:destination="@id/berandaFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.BerandaFragment"
+        tools:layout="@layout/fragment_beranda">
+        <action
+            android:id="@+id/action_berandaFragment_to_pilihLevelFragment"
+            app:destination="@id/pilihLevelFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/berandaFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_berandaFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permainanFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.PermainanFragment"
+        tools:layout="@layout/fragment_permainan">
+        <argument
+            android:name="levelId"
+            android:defaultValue="null"
+            app:argType="string" />
+        <argument
+            android:name="quizHistoryId"
+            android:defaultValue="null"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_permainanFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment"
+            app:popUpTo="@id/berandaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.ProfileFragment"
+        tools:layout="@layout/fragment_profil">
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_peringkatFragment"
+            app:destination="@id/peringkatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peringkatFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.LeaderboardFragment"
+        tools:layout="@layout/fragment_leaderboard"></fragment>
+    <fragment
+        android:id="@+id/pilihLevelFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.PilihLevelFragment"
+        tools:layout="@layout/fragment_pilih_level">
+        <action
+            android:id="@+id/action_pilihLevelFragment_to_permainanFragment"
+            app:destination="@id/permainanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.HistoryFragment"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.Archotech.D_Orphan.Views.Fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

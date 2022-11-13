@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgorund_history_gradient"
-    tools:context=".Views.Fragments.LeaderboardFragment">
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.LeaderboardFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

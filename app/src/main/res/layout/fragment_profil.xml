@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background_beranda"
     android:elevation="20sp"
-    tools:context=".Views.Fragments.ProfileFragment">
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.ProfileFragment">
 
     <ScrollView
         android:id="@+id/scrollViewProfile"

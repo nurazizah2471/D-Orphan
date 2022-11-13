@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Fragments.PermainanFragment">
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.PermainanFragment">
 
     <ScrollView
         android:id="@+id/scrollViewPermainan"

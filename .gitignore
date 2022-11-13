@@ -11,8 +11,8 @@
 /build
 /captures
 .externalNativeBuild
-/app/src/main/java/com/example/phys8/Helpers/Const.java
+/app/src/main/java/com/example/D_Orphan/Helpers/Const.java
 .cxx
 local.properties
 
-app/src/main/java/com/example/phys8/Helpers/Const.java
+app/src/main/java/com/example/D_Orphan/Helpers/Const.java

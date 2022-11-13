@@ -22,7 +22,7 @@ android {
         pickFirst 'lib/x86_64/librsjni.so'
     }
     defaultConfig {
-        applicationId "com.example.phys8"
+        applicationId "com.example.D_Orphan"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
