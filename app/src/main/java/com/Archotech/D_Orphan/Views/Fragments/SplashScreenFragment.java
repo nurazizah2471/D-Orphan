@@ -51,8 +51,8 @@ public class SplashScreenFragment extends Fragment {
 
         bottomAnimation = AnimationUtils.loadAnimation(getActivity(), R.anim.bottom_animation);
 
-        linearLayout_splash_screen_fragment = view.findViewById(R.id.linearLayout_splash_screen_fragment);
-        txt_app_version_splash_screen_fragment = view.findViewById(R.id.txt_app_slogan_splash_screen_fragment);
+        linearLayout_splash_screen_fragment = view.findViewById(R.id.linearlayout_fragment_splash_screen);
+        txt_app_version_splash_screen_fragment = view.findViewById(R.id.txt_slogan_fragment_splash_screen);
 
         linearLayout_splash_screen_fragment.setAnimation(bottomAnimation);
         txt_app_version_splash_screen_fragment.setAnimation(bottomAnimation);

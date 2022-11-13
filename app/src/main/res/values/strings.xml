@@ -16,4 +16,6 @@
     <string name="nothing">-</string>
     <string name="none">0</string>
     <string name="KetLoading">Sedang menggugah...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
