@@ -4,16 +4,20 @@
     <item
         android:id="@+id/berandaFragment"
 
-        android:title="Beranda" />
+        android:icon="@drawable/ic_kursus"
+        android:title="Kursus" />
     <item
         android:id="@+id/pilihLevelFragment"
 
-        android:title="Pilih Level" />
+        android:icon="@drawable/ic_cari"
+        android:title="Cari" />
     <item
         android:id="@+id/permainanFragment"
-        android:title="Permainan" />
+        android:icon="@drawable/ic_lomba"
+        android:title="Lomba" />
     <item
         android:id="@+id/profileFragment"
 
+        android:icon="@drawable/ic_profil"
         android:title="Profil" />
 </menu>
