@@ -3,6 +3,38 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/bg_splash_screen.xml" value="0.166" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/btn_primary.xml" value="0.159" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/btn_secondary.xml" value="0.159" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/gradient_background.xml" value="0.166" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/ic_close.xml" value="0.182" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/ic_edit.xml" value="0.182" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/ic_outline_email_24.xml" value="0.17" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/selector_states_bottomnavigationview.xml" value="0.166" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/selector_states_textinputlayout.xml" value="0.166" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/font/be_vietnam.xml" value="0.14539473684210527" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/font/be_vietnam_semibold.xml" value="0.14539473684210527" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/card_peserta_kursus.xml" value="0.3333333333333333" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_beranda.xml" value="0.11277173913043478" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_detail_panti_asuhan_tutor.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_detail_rekomendasi_tutor.xml" value="0.13333333333333333" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_leaderboard.xml" value="0.12631578947368421" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_log_in_panti.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_log_in_tutor.xml" value="0.22" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_profil_panti.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_sign_up_panti.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_splash_screen.xml" value="0.14666666666666667" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_tabview_log_in.xml" value="0.14666666666666667" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout.xml" value="0.11277173913043478" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout_alert_sign_out_panti.xml" value="0.22" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout_card_peserta_kursus.xml" value="0.10724043715846994" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout_sheets-bottom_ubah_peserta_kursus.xml" value="0.10724043715846994" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout_sheetsbottom_ubah_peserta_kursus.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/menu/main_menu.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/phys8/app/src/main/res/drawable-v24/gradient_background_corner.xml" value="0.15026087454956302" />
         <entry key="..\:/phys8/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17291666666666666" />
         <entry key="..\:/phys8/app/src/main/res/drawable/backgorund_correct_answer_gameplay.xml" value="0.21904761904761905" />
@@ -71,7 +103,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.20833333333333334" />
+        <option name="scale" value="0.16666666666666666" />
       </ProjectState>
     </option>
   </component>
