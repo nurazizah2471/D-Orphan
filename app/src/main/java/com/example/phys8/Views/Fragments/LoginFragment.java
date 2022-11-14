@@ -99,9 +99,17 @@ public class LoginFragment extends Fragment {
         }else{
             initial(view);
             loginProccess();
+            goToRegisterFragment();
         }
     }
-
+    private void goToRegisterFragment(){
+        btn_daftar_fragment_log_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.registerFragment);
+            }
+        });
+    }
     private void loginProccess(){
         btn_masuk_fragment_log_in.setOnClickListener(new View.OnClickListener() {
             @Override
