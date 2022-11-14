@@ -69,8 +69,8 @@ public class ApiService {
     public Call<TokenResponse> login(String email, String password){
         return api.login(email, password);
     }
-    public Call<Register> register(String name, String email, String password, String password_confirmation){
-        return api.register(name, email, password, password_confirmation);
+    public Call<Register> register(String email, String password, String password_confirmation, String type_user){
+        return api.register(email, password, password_confirmation, type_user);
     }
     public Call<JsonObject> logout(){
         return api.logout(helper.getUserId());

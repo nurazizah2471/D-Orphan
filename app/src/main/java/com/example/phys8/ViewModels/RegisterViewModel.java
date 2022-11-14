@@ -17,7 +17,7 @@ public class RegisterViewModel extends AndroidViewModel {
         authRepository = AuthRepository.getInstance();
     }
 
-    public MutableLiveData<Register> register(String name, String email, String password, String password_confirmation){
-        return authRepository.register(name, email, password, password_confirmation);
+    public MutableLiveData<Register> register(String email, String password, String password_confirmation, String type_user){
+        return authRepository.register(email, password, password_confirmation, type_user);
     }
 }

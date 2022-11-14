@@ -48,10 +48,10 @@ public class AuthRepository {
         return tokenResponseMutableLiveData;
     }
 
-    public MutableLiveData<Register> register(String name, String email, String password, String password_confirmation){
+    public MutableLiveData<Register> register(String email, String password, String password_confirmation, String type_user){
         MutableLiveData<Register> RegisterResponseMutableLiveData = new MutableLiveData<>();
 
-        apiService.register(name, email, password, password_confirmation).enqueue(new Callback<Register>() {
+        apiService.register(email, password, password_confirmation, type_user).enqueue(new Callback<Register>() {
             @Override
             public void onResponse(Call<Register> call, Response<Register> response) {
                 if(response.isSuccessful()){

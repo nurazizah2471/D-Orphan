@@ -99,6 +99,45 @@
                     android:hint="hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Daftar sebagai:"
+                app:layout_constraintStart_toStartOf="@+id/rg_type_user_fragment_register"
+                app:layout_constraintTop_toBottomOf="@+id/til_password_confirmation_fragment_register" />
+
+            <RadioGroup
+                android:id="@+id/rg_type_user_fragment_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <RadioButton
+                    android:id="@+id/rg_value_panti_asuhan_fragment_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Panti Asuhan" />
+
+                <RadioButton
+                    android:id="@+id/rg_value_tutor_fragment_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tutor" />
+
+            </RadioGroup>
+
             <Button
                 android:id="@+id/btn_daftar_fragment_register"
                 android:layout_width="wrap_content"
@@ -109,7 +148,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_password_confirmation_fragment_register" />
+                app:layout_constraintTop_toBottomOf="@+id/rg_type_user_fragment_register" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

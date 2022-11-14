@@ -95,7 +95,7 @@ public class LoginFragment extends Fragment {
         helper = SharedPreferenceHelper.getInstance(requireActivity());
 
         if(helper.getUserId()!=""){
-            Navigation.findNavController(view).navigate(R.id.kursusFragment);
+            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_kursusFragment);
         }else{
             initial(view);
             loginProccess();
@@ -106,7 +106,7 @@ public class LoginFragment extends Fragment {
         btn_daftar_fragment_log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.registerFragment);
+                Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment2);
             }
         });
     }
@@ -125,7 +125,7 @@ public class LoginFragment extends Fragment {
                           btn_masuk_fragment_log_in.setEnabled(true);
                           helper.saveAccessToken(tokenResponse.getResult().getAuthorization(), tokenResponse.getUserId(), tokenResponse.getType_user());
 
-                          Navigation.findNavController(view).navigate(R.id.kursusFragment);
+                          Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_kursusFragment);
                           Toast.makeText(LoginFragment.this.requireActivity(), tokenResponse.getStatus(), Toast.LENGTH_SHORT).show();
                       }else{
                           loadingButtonSubmitLogin(false);
