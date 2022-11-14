@@ -4,175 +4,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
     tools:context=".Views.Fragments.LoginFragment">
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/scrollView_fragment_log_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/scrollView_fragmentLogin"
+            android:id="@+id/cons_scrollView_fragment_log_in"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/txt_judul_fragment_log_in"
+                style="@style/D_OrphanTextView.Headline"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_vector_logo"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Selamat datang kembali"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:id="@+id/txt_subjudul_fragment_log_in"
+                style="@style/D_OrphanTextView.Body"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="@string/btn_login_txt"
-                android:textColor="#FFFFFF"
-                android:textSize="34sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                android:layout_marginTop="4dp"
+                android:text="Silakan masuk ke akun Anda"
+                android:textAlignment="center"
+                android:textColor="@color/grey500"
+                app:layout_constraintEnd_toEndOf="@+id/txt_judul_fragment_log_in"
+                app:layout_constraintStart_toStartOf="@+id/txt_judul_fragment_log_in"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul_fragment_log_in" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearLayout_daftar_fragment_log_in"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/copyright"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_peserta_kursus_fragment_profil_panti">
+
+                <TextView
+                    android:id="@+id/txt_belum_fragment_log_in"
+                    style="@style/D_OrphanTextView.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:paddingEnd="2dp"
+                    android:text="Belum punya akun?"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btn_daftar_fragment_log_in"
+                    style="@style/D_OrphanTextView.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="2dp"
+                    android:text="Daftar"
+                    android:textColor="@color/blue500"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="match_parent"
+                android:id="@+id/cv_peserta_kursus_fragment_profil_panti"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                app:cardBackgroundColor="#F9E428"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5">
+                app:layout_constraintTop_toBottomOf="@+id/txt_subjudul_fragment_log_in">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_cv_peserta_kursus_fragment_profil_panti"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="30dp">
+                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Email"
-                        android:textColor="#070707"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="@string/kata_sandi"
-                        android:textColor="#070707"
-                        app:layout_constraintStart_toStartOf="@+id/til_email_LoginFragment"
-                        app:layout_constraintTop_toBottomOf="@+id/til_email_LoginFragment" />
-
-                    <FrameLayout
-                        android:id="@+id/btn_submit_LoginFragment"
-
+                    <Button
+                        android:id="@+id/btn_masuk_fragment_log_in"
+                        style="@style/D_OrphanTextView.Label"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:background="@drawable/bg_btn_red_active"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_primary"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/til_kata_sandi_fragment_log_in"
+                        app:layout_constraintStart_toStartOf="@+id/til_kata_sandi_fragment_log_in"
+                        app:layout_constraintTop_toBottomOf="@+id/til_kata_sandi_fragment_log_in" />
 
-                        android:paddingTop="15dp"
-                        android:paddingBottom="15dp"
-                        app:layout_constraintEnd_toEndOf="@+id/til_password_LoginFragment"
-                        app:layout_constraintStart_toStartOf="@+id/til_password_LoginFragment"
-                        app:layout_constraintTop_toBottomOf="@+id/til_password_LoginFragment">
+                    <TextView
+                        android:id="@+id/txt_btn_masuk_fragment_log_in"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Masuk"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintStart_toStartOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintTop_toTopOf="@+id/btn_masuk_fragment_log_in" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                    <ProgressBar
+                        android:id="@+id/progressBar_fragment_login"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
 
-                            <TextView
-                                android:id="@+id/txt_btn_fragmentLogin"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:paddingLeft="5dp"
-                                android:text="@string/btn_login_txt"
-                                android:textColor="#FFFFFF"
-                                android:textStyle="bold" />
-
-                            <ProgressBar
-                                android:id="@+id/progressBar_FragmentLogin"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_centerVertical="true"
-                                android:layout_toLeftOf="@id/txt_btn_fragmentLogin"
-
-                                android:indeterminateDrawable="@drawable/progressdialogshape"
-                                android:visibility="gone" />
-                        </RelativeLayout>
-
-                    </FrameLayout>
+                        android:indeterminateDrawable="@drawable/progressdialogshape"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintStart_toStartOf="@+id/btn_masuk_fragment_log_in"
+                        app:layout_constraintTop_toTopOf="@+id/btn_masuk_fragment_log_in" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_email_LoginFragment"
-                        android:layout_width="0dp"
+                        android:id="@+id/til_email_fragment_fragment_ubah_peserta_kursus"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        app:errorEnabled="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/textView"
-                        app:layout_constraintTop_toBottomOf="@+id/textView"
-                        app:placeholderText="@string/til_email"
-                        app:placeholderTextColor="#918C8C">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bg_til" />
+                            android:hint="Surel"
+                            android:inputType="textEmailAddress" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_password_LoginFragment"
-
-                        android:layout_width="0dp"
+                        android:id="@+id/til_kata_sandi_fragment_log_in"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        app:errorEnabled="true"
-                        app:layout_constraintEnd_toEndOf="@+id/til_email_LoginFragment"
-                        app:layout_constraintStart_toStartOf="@+id/textView2"
-                        app:layout_constraintTop_toBottomOf="@+id/textView2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="@+id/til_email_fragment_fragment_ubah_peserta_kursus"
+                        app:layout_constraintStart_toStartOf="@+id/til_email_fragment_fragment_ubah_peserta_kursus"
+                        app:layout_constraintTop_toBottomOf="@+id/til_email_fragment_fragment_ubah_peserta_kursus"
                         app:passwordToggleEnabled="true"
-                        app:placeholderText="@string/til_password"
-                        app:placeholderTextColor="#A39D9D">
+                        app:passwordToggleTint="@color/blue500">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bg_til"
+                            android:hint="Kata Sandi"
                             android:inputType="textPassword" />
+
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

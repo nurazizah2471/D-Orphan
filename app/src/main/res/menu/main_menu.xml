@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/berandaFragment"
+        android:id="@+id/kursusFragmentMainMenu"
 
-        android:title="Beranda" />
+        android:title="Kursus" />
     <item
-        android:id="@+id/pilihLevelFragment"
+        android:id="@+id/cariFragmentMainMenu"
 
-        android:title="Pilih Level" />
+        android:title="Cari" />
     <item
-        android:id="@+id/permainanFragment"
-        android:title="Permainan" />
+        android:id="@+id/rekomendasiFragmentMainMenu"
+        android:title="Rekomendasi" />
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profileFragmentMainMenu"
 
         android:title="Profil" />
 </menu>

@@ -6,14 +6,19 @@ import android.os.Parcelable;
 import com.google.gson.Gson;
 
 public class TokenResponse implements Parcelable {
-
-
     private String status;
+    private String type_user;
     private String userId;
     private Result result;
 
+    public static TokenResponse objectFromData(String str) {
+
+        return new Gson().fromJson(str, TokenResponse.class);
+    }
+
     protected TokenResponse(Parcel in) {
         status = in.readString();
+        type_user = in.readString();
         userId = in.readString();
     }
 
@@ -29,17 +34,20 @@ public class TokenResponse implements Parcelable {
         }
     };
 
-    public static TokenResponse objectFromData(String str) {
-
-        return new Gson().fromJson(str, TokenResponse.class);
-    }
-
     public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getType_user() {
+        return type_user;
+    }
+
+    public void setType_user(String type_user) {
+        this.type_user = type_user;
     }
 
     public String getUserId() {
@@ -62,10 +70,10 @@ public class TokenResponse implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(status);
+        dest.writeString(type_user);
         dest.writeString(userId);
     }
 
@@ -116,4 +124,5 @@ public class TokenResponse implements Parcelable {
             return  this.token_type + "" + this.access_token;
         }
     }
-}
+
+    }

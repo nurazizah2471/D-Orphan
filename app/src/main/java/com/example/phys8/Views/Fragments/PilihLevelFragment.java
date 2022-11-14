@@ -188,7 +188,7 @@ public class PilihLevelFragment extends Fragment {
                 bundle.putString("ticket_level", ""+arrayListLevel.get(positions).getTicket_reward());
 
                 mediaPlayer.start();
-               Navigation.findNavController(myv).navigate(R.id.action_pilihLevelFragment_to_permainanFragment,bundle);
+            //   Navigation.findNavController(myv).navigate(R.id.action_pilihLevelFragment_to_permainanFragment,bundle);
             }else{
                 Toast.makeText(getActivity(), "Terjadi Kesalahan", Toast.LENGTH_SHORT).show();
             }

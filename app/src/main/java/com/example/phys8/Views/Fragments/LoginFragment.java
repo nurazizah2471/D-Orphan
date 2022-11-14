@@ -1,21 +1,17 @@
 package com.example.phys8.Views.Fragments;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,25 +79,23 @@ public class LoginFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
-    private TextInputLayout til_email_LoginFragment, til_password_LoginFragment;
-    private FrameLayout btn_submit_LoginFragment;
-    private TextView txt_btn_fragmentLogin;
+    private TextInputLayout til_email_fragment_fragment_ubah_peserta_kursus, til_kata_sandi_fragment_log_in;
+    private Button btn_masuk_fragment_log_in;
+    private TextView txt_btn_masuk_fragment_log_in, btn_daftar_fragment_log_in;
     private LoginViewModel loginViewModel;
     private UserViewModel userViewModel;
     private SharedPreferenceHelper helper;
-    private ProgressBar progressBar;
+    private ProgressBar progressBar_fragment_login;
     private String objEmailLogin, objPassLogin;
-    private MediaPlayer mediaPlayer;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         helper = SharedPreferenceHelper.getInstance(requireActivity());
-        mediaPlayer = MediaPlayer.create(getActivity(), R.raw.clicksound);
 
         if(helper.getUserId()!=""){
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_berandaFragment2);
+            Navigation.findNavController(view).navigate(R.id.kursusFragment);
         }else{
             initial(view);
             loginProccess();
@@ -109,22 +103,21 @@ public class LoginFragment extends Fragment {
     }
 
     private void loginProccess(){
-        btn_submit_LoginFragment.setOnClickListener(new View.OnClickListener() {
+        btn_masuk_fragment_log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               loadingButtonSubmitLogin(true);
 
-              objEmailLogin = til_email_LoginFragment.getEditText().getText().toString().trim();
-              objPassLogin = til_password_LoginFragment.getEditText().getText().toString().trim();
+              objEmailLogin = til_email_fragment_fragment_ubah_peserta_kursus.getEditText().getText().toString().trim();
+              objPassLogin = til_kata_sandi_fragment_log_in.getEditText().getText().toString().trim();
 
               loginViewModel.login(objEmailLogin, objPassLogin).observe(LoginFragment.this.requireActivity(), tokenResponse -> {
                   if (tokenResponse != null) {
                       if(tokenResponse.getResult()!=null) {
-                          btn_submit_LoginFragment.setEnabled(true);
-                          helper.saveAccessToken(tokenResponse.getResult().getAuthorization(), tokenResponse.getUserId());
+                          btn_masuk_fragment_log_in.setEnabled(true);
+                          helper.saveAccessToken(tokenResponse.getResult().getAuthorization(), tokenResponse.getUserId(), tokenResponse.getType_user());
 
-                          mediaPlayer.start();
-                          Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_berandaFragment);
+                          Navigation.findNavController(view).navigate(R.id.kursusFragment);
                           Toast.makeText(LoginFragment.this.requireActivity(), tokenResponse.getStatus(), Toast.LENGTH_SHORT).show();
                       }else{
                           loadingButtonSubmitLogin(false);
@@ -140,64 +133,35 @@ public class LoginFragment extends Fragment {
     }
 
     private void setActivationButton(Boolean check){
-        btn_submit_LoginFragment.setEnabled(check);
+        btn_masuk_fragment_log_in.setEnabled(check);
         if(check){
-            btn_submit_LoginFragment.setBackgroundResource(R.drawable.bg_btn_red_active);
+            btn_masuk_fragment_log_in.setBackgroundResource(R.drawable.bg_btn_red_active);
         }else{
-            btn_submit_LoginFragment.setBackgroundResource(R.drawable.bg_btn_nonactive);
+            btn_masuk_fragment_log_in.setBackgroundResource(R.drawable.bg_btn_nonactive);
         }
     }
 
     private void loadingButtonSubmitLogin(Boolean check){
         if(check){
-            btn_submit_LoginFragment.setEnabled(!check);
-            progressBar.setVisibility(View.VISIBLE);
-            txt_btn_fragmentLogin.setText("Silakan tunggu");
-            btn_submit_LoginFragment.setBackground(getResources().getDrawable(R.drawable.bg_btn_red_inloading));
+            btn_masuk_fragment_log_in.setEnabled(!check);
+            progressBar_fragment_login.setVisibility(View.VISIBLE);
+            txt_btn_masuk_fragment_log_in.setText("Silakan tunggu");
+            btn_masuk_fragment_log_in.setBackground(getResources().getDrawable(R.drawable.bg_btn_red_inloading));
         }else{
-            progressBar.setVisibility(View.GONE);
-            txt_btn_fragmentLogin.setText("Masuk");
-            btn_submit_LoginFragment.setBackground(getResources().getDrawable(R.drawable.bg_btn_red_active));
-            btn_submit_LoginFragment.setEnabled(!check);
-        }
-    }
-
-    private void tilCheckToDatabase(List<User.Result> user){
-        objEmailLogin = til_email_LoginFragment.getEditText().getText().toString().trim();
-        objPassLogin = til_password_LoginFragment.getEditText().getText().toString().trim();
-
-        if (objEmailLogin.length() == 0) {
-            til_email_LoginFragment.setError("Email tidak boleh kosong");
-            setActivationButton(false);
-        } if (objPassLogin.length() == 0) {
-            til_password_LoginFragment.setError("Password tidak boleh kosong");
-            setActivationButton(false);
-        }else{
-            til_password_LoginFragment.setError("");
-        }
-
-        if (objEmailLogin.length() > 0) {
-            for (int i = 0; i < user.size(); i++) {
-                if (user.get(i).getEmail().equals(objEmailLogin)) {
-                    til_email_LoginFragment.setError("");
-                    setActivationButton(true);
-                    break;
-                } else if (user.get(i).getEmail() != objEmailLogin && i == user.size() - 1) {
-                    til_email_LoginFragment.setError("Akun belum terdaftar");
-                    setActivationButton(false);
-                }else {
-                    setActivationButton(false);
-                }
-            }
+            progressBar_fragment_login.setVisibility(View.GONE);
+            txt_btn_masuk_fragment_log_in.setText("Masuk");
+            btn_masuk_fragment_log_in.setBackground(getResources().getDrawable(R.drawable.bg_btn_red_active));
+            btn_masuk_fragment_log_in.setEnabled(!check);
         }
     }
 
     private void initial(View view) {
-        til_email_LoginFragment = getActivity().findViewById(R.id.til_email_LoginFragment);
-        til_password_LoginFragment = getActivity().findViewById(R.id.til_password_LoginFragment);
-        btn_submit_LoginFragment = getActivity().findViewById(R.id.btn_submit_LoginFragment);
-        progressBar = view.findViewById(R.id.progressBar_FragmentLogin); // Get ProgressBar reference
-        txt_btn_fragmentLogin = view.findViewById(R.id.txt_btn_fragmentLogin);
+        til_email_fragment_fragment_ubah_peserta_kursus = getActivity().findViewById(R.id.til_email_fragment_fragment_ubah_peserta_kursus);
+        til_kata_sandi_fragment_log_in = getActivity().findViewById(R.id.til_kata_sandi_fragment_log_in);
+        btn_masuk_fragment_log_in = getActivity().findViewById(R.id.btn_masuk_fragment_log_in);
+        progressBar_fragment_login = view.findViewById(R.id.progressBar_fragment_login); // Get ProgressBar reference
+        txt_btn_masuk_fragment_log_in = view.findViewById(R.id.txt_btn_masuk_fragment_log_in);
+        btn_daftar_fragment_log_in = view.findViewById(R.id.btn_daftar_fragment_log_in);
 
         loginViewModel = new ViewModelProvider(getActivity()).get(LoginViewModel.class);
         userViewModel = new ViewModelProvider(getActivity()).get(UserViewModel.class);
