@@ -2,12 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cons_fragment_log_in_panti"
+    android:id="@+id/cons_fragment_log_in_tutor"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:id="@+id/scrollview_fragment_log_in_panti"
+        android:id="@+id/scrollView_fragment_log_in_tutor"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,12 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cons_scrollView_fragment_log_in_panti"
+            android:id="@+id/cons_scrollView_fragment_log_in_tutor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txt_judul_fragment_log_in_panti"
+                android:id="@+id/txt_judul_fragment_log_in_tutor"
                 style="@style/D_OrphanTextView.Headline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txt_subjudul_fragment_log_in_panti"
+                android:id="@+id/txt_subjudul_fragment_log_in_tutor"
                 style="@style/D_OrphanTextView.Body"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -44,12 +44,12 @@
                 android:text="Silakan masuk ke akun Anda"
                 android:textAlignment="center"
                 android:textColor="@color/grey500"
-                app:layout_constraintEnd_toEndOf="@+id/txt_judul_fragment_log_in_panti"
-                app:layout_constraintStart_toStartOf="@+id/txt_judul_fragment_log_in_panti"
-                app:layout_constraintTop_toBottomOf="@+id/txt_judul_fragment_log_in_panti" />
+                app:layout_constraintEnd_toEndOf="@+id/txt_judul_fragment_log_in_tutor"
+                app:layout_constraintStart_toStartOf="@+id/txt_judul_fragment_log_in_tutor"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul_fragment_log_in_tutor" />
 
             <LinearLayout
-                android:id="@+id/linearLayout_daftar_fragment_log_in_panti"
+                android:id="@+id/linearLayout_daftar_fragment_log_in_tutor"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -61,10 +61,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_fragment_log_in_panti">
+                app:layout_constraintTop_toBottomOf="@+id/cv_peserta_kursus_fragment_profil_panti">
 
                 <TextView
-                    android:id="@+id/txt_belum_fragment_log_in_panti"
+                    android:id="@+id/txt_belum_fragment_log_in_tutor"
                     style="@style/D_OrphanTextView.Body"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/btn_daftar_fragment_log_in_panti"
+                    android:id="@+id/btn_daftar_fragment_log_in_tutor"
                     style="@style/D_OrphanTextView.Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_fragment_log_in_panti"
+                android:id="@+id/cv_peserta_kursus_fragment_profil_panti"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -98,31 +98,32 @@
                 app:cardPreventCornerOverlap="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_subjudul_fragment_log_in_panti">
+                app:layout_constraintTop_toBottomOf="@+id/txt_subjudul_fragment_log_in_tutor">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cons_cv_fragment_log_in_panti"
+                    android:id="@+id/cons_cv_peserta_kursus_fragment_profil_panti"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/btn_masuk_fragment_log_in_panti"
+                        android:id="@+id/btn_masuk_fragment_log_in_tutor"
                         style="@style/D_OrphanTextView.Label"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
                         android:background="@drawable/btn_primary"
                         android:text="Masuk"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/til_kata_sandi_fragment_log_in_panti"
-                        app:layout_constraintStart_toStartOf="@+id/til_kata_sandi_fragment_log_in_panti"
-                        app:layout_constraintTop_toBottomOf="@+id/til_kata_sandi_fragment_log_in_panti" />
+                        app:layout_constraintEnd_toEndOf="@+id/til_kata_sandi_fragment_log_in_tutor"
+                        app:layout_constraintStart_toStartOf="@+id/til_kata_sandi_fragment_log_in_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/til_kata_sandi_fragment_log_in_tutor" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor"
+                        android:id="@+id/til_nama_fragment_fragment_ubah_peserta_kursus"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -146,7 +147,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_kata_sandi_fragment_log_in_panti"
+                        android:id="@+id/til_kata_sandi_fragment_log_in_tutor"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -157,9 +158,9 @@
                         app:boxStrokeWidth="2dp"
                         app:boxStrokeWidthFocused="3dp"
                         app:hintTextColor="@drawable/selector_states_textinputlayout"
-                        app:layout_constraintEnd_toEndOf="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor"
-                        app:layout_constraintStart_toStartOf="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor"
-                        app:layout_constraintTop_toBottomOf="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor"
+                        app:layout_constraintEnd_toEndOf="@+id/til_nama_fragment_fragment_ubah_peserta_kursus"
+                        app:layout_constraintStart_toStartOf="@+id/til_nama_fragment_fragment_ubah_peserta_kursus"
+                        app:layout_constraintTop_toBottomOf="@+id/til_nama_fragment_fragment_ubah_peserta_kursus"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="@color/blue500">
 
