@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_fragment_detail_panti_asuhan_tutor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.DetailPantiAsuhanTutorFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView_fragment_detail_panti_asuhan_tutor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_scrollView_fragment_detail_panti_asuhan_tutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_fragment_detail_panti_asuhan_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Profil Panti Asuhan"
+                app:titleTextAppearance="@style/D_OrphanTextView.Headline"
+                app:titleTextColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_deskripsi_detail_panti_asuhan_fragment_tutor"
+                style="@style/D_OrphanTextView.Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Panti Sinar Bangsa telah didirikan sejak tahun 1985. Pemilik dari panti ini bernama Susanto Budiman. Beliau mendirikan panti ini karena memiliki amanah sebelumnya untuk membantu setiap anak yang kehilangan orang tua dan membutuhkan bantuan serta bimbingan."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_detail_panti_asuhan_fragment_tutor" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_detail_panti_asuhan_fragment_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_fragment_detail_panti_asuhan_tutor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_cv_detail_panti_asuhan_fragment_tutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_gambar_detail_panti_asuhan_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/image_panti" />
+
+                    <TextView
+                        android:id="@+id/txt_detail_panti_asuhan_fragment_tutor"
+                        style="@style/D_OrphanTextView.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Sinar Bangsa"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_gambar_detail_panti_asuhan_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_icon_location_detail_panti_asuhan_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_detail_panti_asuhan_fragment_tutor"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/txt_location_detail_panti_asuhan_fragment_tutor"
+                        style="@style/D_OrphanTextView.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Jl. Pahlawan No. 2B"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_icon_location_detail_panti_asuhan_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_detail_panti_asuhan_fragment_tutor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

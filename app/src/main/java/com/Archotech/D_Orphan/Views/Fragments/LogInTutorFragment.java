@@ -21,21 +21,22 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.example.D_Orphan.R;
 
 
-public class LoginFragment extends Fragment {
+public class LogInTutorFragment extends Fragment {
 
     TextView reg_btn;
 
-    TextInputLayout email_login, pass_login;
-    Button btn_login;
+    TextInputLayout surel_login, kata_sandi_login;
+    Button btn_masuk;
+    TextView btn_daftar;
 
     private LoginViewModel loginViewModel;
     private SharedPreferenceHelper helper;
 
-    public LoginFragment() {
+    public LogInTutorFragment() {
     }
 
-    public static LoginFragment newInstance(String param1, String param2) {
-        LoginFragment fragment = new LoginFragment();
+    public static LogInTutorFragment newInstance(String param1, String param2) {
+        LogInTutorFragment fragment = new LogInTutorFragment();
         return fragment;
     }
 
@@ -47,19 +48,19 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        return inflater.inflate(R.layout.fragment_log_in_tutor, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        email_login = view.findViewById(R.id.email_input);
-        pass_login = view.findViewById(R.id.pass_input);
-        btn_login = view.findViewById(R.id.btn_login);
+        surel_login = view.findViewById(R.id.til_surel_fragment_log_in_tutor);
+        kata_sandi_login = view.findViewById(R.id.til_kata_sandi_fragment_log_in_tutor);
+        btn_masuk = view.findViewById(R.id.btn_masuk_fragment_log_in_tutor);
 
-        reg_btn = view.findViewById(R.id.buttonReg);
-        reg_btn.setOnClickListener(new View.OnClickListener() {
+        btn_daftar = view.findViewById(R.id.btn_daftar_fragment_log_in_tutor);
+        btn_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                NavDirections action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment();
@@ -69,18 +70,18 @@ public class LoginFragment extends Fragment {
 
         loginViewModel = new ViewModelProvider(getActivity()).get(LoginViewModel.class);
         helper = SharedPreferenceHelper.getInstance(requireActivity());
-        btn_login.setOnClickListener(view1 -> {
-            if (!email_login.getEditText().getText().toString().isEmpty()
-                    && !pass_login.getEditText().getText().toString().isEmpty()) {
-                String email = email_login.getEditText().getText().toString().trim();
-                String pass = pass_login.getEditText().getText().toString().trim();
-                loginViewModel.login(email, pass).observe(requireActivity(), tokenResponse -> {
+        btn_masuk.setOnClickListener(view1 -> {
+            if (!surel_login.getEditText().getText().toString().isEmpty()
+                    && !kata_sandi_login.getEditText().getText().toString().isEmpty()) {
+                String surel = surel_login.getEditText().getText().toString().trim();
+                String kata_sandi = kata_sandi_login.getEditText().getText().toString().trim();
+                loginViewModel.login(surel, kata_sandi).observe(requireActivity(), tokenResponse -> {
                     if (tokenResponse != null) {
-                        helper.saveAccessToken(tokenResponse.getAuthorization());
-                        helper.saveId(tokenResponse.getId());
-                        NavDirections actions = LoginFragmentDirections.actionLoginFragmentToGameFragment();
-                        Navigation.findNavController(view1).navigate(actions);
-                        Toast.makeText(requireActivity(), "Login Success", Toast.LENGTH_SHORT).show();
+//                        helper.saveAccessToken(tokenResponse.getAuthorization());
+//                        helper.saveId(tokenResponse.getId());
+//                        NavDirections actions = LoginFragmentDirections.actionLoginFragmentToGameFragment();
+//                        Navigation.findNavController(view1).navigate(actions);
+//                        Toast.makeText(requireActivity(), "Login Success", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(requireActivity(), "Login Failed", Toast.LENGTH_SHORT).show();
                     }

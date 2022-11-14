@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_fragment_detail_rekomendasi_tutor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Archotech.D_Orphan.Views.Fragments.DetailRekomendasiTutorFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView_fragment_detail_rekomendasi_tutor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_scrollView_fragment_detail_rekomendasi_tutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_fragment_detail_rekomendasi_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Detail Rekomendasi"
+                app:titleTextAppearance="@style/D_OrphanTextView.Headline"
+                app:titleTextColor="@color/black" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_detail_rekomendasi_fragment_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_fragment_detail_rekomendasi_tutor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_cv_detail_rekomendasi_fragment_tutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_tanggal_penyelenggaran_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_penyelenggara_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tanggal Penyelenggaraan"
+                            android:inputType="date" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nama Peserta Lomba"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_nama_lomba_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_nama_peserta_lomba_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nama Lomba"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_kategori_bidang_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="Kategori Bidang"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_nama_lomba_fragment_detail_rekomendasi_tutor">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/AutoCompleteTextview"
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:inputType="none"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_penyelenggara_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_kategori_bidang_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Penyelenggara"
+                            android:inputType="time" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_jam_mulai_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_tanggal_penyelenggaran_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Jam Mulai"
+                            android:inputType="time" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_jam_berakhir_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_jam_mulai_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Jam Berakhir"
+                            android:inputType="time" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_kota_penyelenggaraan_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_jam_berakhir_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Kota Penyelenggaraan"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_deskripsi_lomba_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_kota_penyelenggaraan_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Deskripsi Lomba"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_tautan_lomba_fragment_detail_rekomendasi_tutor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        app:boxStrokeColor="@drawable/selector_states_textinputlayout"
+                        app:boxStrokeWidth="2dp"
+                        app:boxStrokeWidthFocused="3dp"
+                        app:hintTextColor="@drawable/selector_states_textinputlayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_deskripsi_lomba_fragment_detail_rekomendasi_tutor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/D_OrphanTextView.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tautan Lomba"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_unggah_foto_detail_rekomendasi_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/btn_secondary"
+                        android:text="Unggah Foto"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue500"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_tautan_lomba_fragment_detail_rekomendasi_tutor" />
+
+                    <Button
+                        android:id="@+id/btn_kirim_rekomendasi_detail_rekomendasi_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/btn_primary"
+                        android:text="Kirim Rekomendasi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_unggah_foto_detail_rekomendasi_fragment_tutor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
