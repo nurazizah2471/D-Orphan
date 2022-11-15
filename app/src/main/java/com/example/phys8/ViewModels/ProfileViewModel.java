@@ -39,14 +39,6 @@ public class ProfileViewModel extends AndroidViewModel {
         return resultUsers;
     }
 
-    private MutableLiveData<User.Result> resultUsers2 = new MutableLiveData<>();
-    public void getUserWithId2(String userId){
-        resultUsers2 = profileRepository.getUserWithId(userId);
-    }
-    public LiveData<User.Result> getResultUserWithId2(){
-        return resultUsers2;
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();

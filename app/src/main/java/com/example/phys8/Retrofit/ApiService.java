@@ -2,7 +2,6 @@ package com.example.phys8.Retrofit;
 
 import com.example.phys8.Helpers.Const;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
-import com.example.phys8.Models.GetQuestionWithHistoryId;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.Level;
 import com.example.phys8.Models.QuizHistory;
@@ -84,7 +83,7 @@ public class ApiService {
     public Call<userHistory> getQuizHistory(String student_id){ return api.getQuizHistory(student_id); }
     public Call<Rank> getRank(){ return api.getRank(); }
     public Call<JsonObject> addUserAnswer(String quiz_history_id, String question_id, String user_answer) {return api.addUserAnswer(quiz_history_id, question_id, user_answer, helper.getUserId());}
-    public Call<GetQuestionWithHistoryId> getQuestionWithHistoryId(String quizHistoryId) {return api.getQuestionWithHistoryId(quizHistoryId);}
+   // public Call<GetQuestionWithHistoryId> getQuestionWithHistoryId(String quizHistoryId) {return api.getQuestionWithHistoryId(quizHistoryId);}
     public Call<User> getUserWithId(String userId) {return api.getUserWithId(userId);}
     public Call<JsonObject> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active) {return api.updateRewardQuiz(quiz_history_id, score_level, money_level, ticket_level, student_id, active);}
 }

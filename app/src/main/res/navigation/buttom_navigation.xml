@@ -48,7 +48,7 @@
         tools:layout="@layout/fragment_rekomendasi" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.phys8.profileFragment"
+        android:name="com.example.phys8.Views.Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
