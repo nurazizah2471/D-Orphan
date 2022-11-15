@@ -2,6 +2,7 @@ package com.example.phys8.Retrofit;
 
 import com.example.phys8.Helpers.Const;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
+import com.example.phys8.Models.CourseBooking;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.Level;
 import com.example.phys8.Models.QuizHistory;
@@ -86,4 +87,6 @@ public class ApiService {
    // public Call<GetQuestionWithHistoryId> getQuestionWithHistoryId(String quizHistoryId) {return api.getQuestionWithHistoryId(quizHistoryId);}
     public Call<User> getUserWithId(String userId) {return api.getUserWithId(userId);}
     public Call<JsonObject> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active) {return api.updateRewardQuiz(quiz_history_id, score_level, money_level, ticket_level, student_id, active);}
+
+    public Call<CourseBooking> getCourseBooking(String user_id, int type_user){ return api.getCourseBooking(user_id, type_user); }
 }

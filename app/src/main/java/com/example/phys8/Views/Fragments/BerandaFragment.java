@@ -101,7 +101,7 @@ public class BerandaFragment extends Fragment {
 
         profileViewModel.init(helper.getAccessToken());
         profileViewModel.getUserWithId(helper.getUserId());
-        profileViewModel.getResultUserWithId().observe(getActivity(), showResultUserInfo);
+       // profileViewModel.getResultUserWithId().observe(getActivity(), showResultUserInfo);
 
         card_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,26 +136,26 @@ public class BerandaFragment extends Fragment {
         });
     }
 
-    private Observer<User.Result> showResultUserInfo = new Observer<User.Result>() {
-        @Override
-        public void onChanged(User.Result results) {
-            if(results.getUsername().length()>15) {
-                name_user.setText(String.valueOf(results.getUsername().subSequence(0, 16)+"..."));
-            }else {
-                name_user.setText(String.valueOf(results.getUsername()));
-            }
-            cash_amount.setText(String.valueOf(results.getMyuser().getMoney()));
-            ticket_amount.setText(String.valueOf(results.getMyuser().getTicket()));
-            coin_amount.setText(String.valueOf(results.getMyuser().getScore()));
-
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    loadBeranda.setVisibility(View.GONE); // Hide Progress bar
-                }
-            }, 300);
-        }
-    };
+//    private Observer<User.Result> showResultUserInfo = new Observer<User.Result>() {
+//        @Override
+//        public void onChanged(User.Result results) {
+//            if(results.getUsername().length()>15) {
+//                name_user.setText(String.valueOf(results.getUsername().subSequence(0, 16)+"..."));
+//            }else {
+//                name_user.setText(String.valueOf(results.getUsername()));
+//            }
+//            cash_amount.setText(String.valueOf(results.getMyuser().getMoney()));
+//            ticket_amount.setText(String.valueOf(results.getMyuser().getTicket()));
+//            coin_amount.setText(String.valueOf(results.getMyuser().getScore()));
+//
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    loadBeranda.setVisibility(View.GONE); // Hide Progress bar
+//                }
+//            }, 300);
+//        }
+//    };
 
     private void inisialisasi() {
         ticket_amount = getActivity().findViewById(R.id.ticket_amount);
