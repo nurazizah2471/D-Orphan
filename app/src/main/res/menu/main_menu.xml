@@ -5,10 +5,10 @@
         android:id="@+id/kursusFragment"
 
         android:title="Kursus" />
-<!--    <item-->
-<!--        android:id="@+id/cariFragment"-->
+    <item
+        android:id="@+id/cariKursusFragment"
 
-<!--        android:title="Cari" />-->
+        android:title="Cari" />
 <!--    <item-->
 <!--        android:id="@+id/rekomendasiFragmentMainMenu"-->
 <!--        android:title="Rekomendasi" />-->
