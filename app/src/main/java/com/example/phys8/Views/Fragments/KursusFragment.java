@@ -2,13 +2,18 @@ package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.phys8.Adapters.rvAdapter_kursusFragment;
 import com.example.phys8.R;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +62,46 @@ public class KursusFragment extends Fragment {
         }
     }
 
+    TabLayout tabLayout_list_kursus_fragment_kursus;
+    ViewPager2 viewpager_list_kursus_fragment_kursus;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kursus, container, false);
+
+        ViewGroup view=(ViewGroup) inflater.inflate(R.layout.fragment_kursus, container, false);
+        initialisasi(view);
+
+        viewpager_list_kursus_fragment_kursus.setAdapter(
+                new rvAdapter_kursusFragment(this)
+        );
+        new TabLayoutMediator(
+                tabLayout_list_kursus_fragment_kursus, viewpager_list_kursus_fragment_kursus,
+                new TabLayoutMediator.TabConfigurationStrategy() {
+                    @Override
+                    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                        switch(position){
+                            case 0:
+                                tab.setText("Pesanan");
+                                break;
+
+                            case 1:
+                                tab.setText("Berlangsung");
+                                break;
+
+                            case 2:
+                                tab.setText("Riwayat");
+                                break;
+                        }
+
+                    }
+                }
+        ).attach();
+        return view;
+    }
+
+    private void initialisasi(ViewGroup view) {
+        tabLayout_list_kursus_fragment_kursus=view.findViewById(R.id.tabLayout_list_kursus_fragment_kursus);
+        viewpager_list_kursus_fragment_kursus=view.findViewById(R.id.viewpager_list_kursus_fragment_kursus);
     }
 }

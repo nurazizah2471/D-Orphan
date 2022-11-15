@@ -1,14 +1,28 @@
 package com.example.phys8.Views.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.phys8.Adapters.rvAdapter_level;
+import com.example.phys8.Adapters.rvAdapter_tabBerlangsungKursus;
+import com.example.phys8.Helpers.SharedPreferenceHelper;
+import com.example.phys8.Models.Level;
 import com.example.phys8.R;
+import com.example.phys8.ViewModels.PermainanViewModel;
+import com.example.phys8.ViewModels.QuizHistoryViewModel;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,5 +76,25 @@ public class TabPesananKursus extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tab_pesanan_kursus, container, false);
+    }
+
+    private RecyclerView rv_tab_pesanan_item_rycyclerView;
+    private rvAdapter_tabBerlangsungKursus adapter_tabBerlangsungKursus;
+    private  permainanViewModel;
+    private QuizHistoryViewModel quizHistoryViewModel;
+    private SharedPreferenceHelper helper;
+    private int numberOfColumns, bundleLevelId, score_level, money_level, ticket_level, positions;
+    private View myv;
+    String checkAvailable;
+    private Bundle bundle;
+    private List<Level.Result> arrayListLevel;
+    private MediaPlayer mediaPlayer;
+    private ConstraintLayout loadLevel;
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initial(view);
+        rg_type_user_change();
+        registerProccess();
     }
 }

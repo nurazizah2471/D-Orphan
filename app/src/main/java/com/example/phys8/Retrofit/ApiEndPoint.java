@@ -1,5 +1,6 @@
 package com.example.phys8.Retrofit;
 
+import com.example.phys8.Models.CourseBooking;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.Level;
 import com.example.phys8.Models.QuizHistory;
@@ -78,6 +79,11 @@ public interface ApiEndPoint {
     @POST("get_user")
     @FormUrlEncoded
     Call<User> getUserWithId(@Field("user_id") String user_id);
+
+    @POST("all_data_course_booking")
+    @FormUrlEncoded
+    Call<CourseBooking> getCourseBooking(@Field("user_id") String user_id,
+                                         @Field("type_user") int type_user);
 
     @POST("add_reward")
     @FormUrlEncoded
