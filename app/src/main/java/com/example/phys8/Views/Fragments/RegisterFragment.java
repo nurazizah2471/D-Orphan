@@ -125,7 +125,7 @@ public class RegisterFragment extends Fragment {
                         objName = til_name_fragment_register.getEditText().getText().toString().trim();
 
                         if (objEmailRegister != null && objPassRegister != null && objPassConfirmationRegister != null && objTypeUser != null && objName != null){
-                            registerViewModel.register(objEmailRegister, objPassRegister, objPassConfirmationRegister, objTypeUser, objName).observe(RegisterFragment.this.requireActivity(), register -> {
+                            registerViewModel.register(objEmailRegister, objPassRegister, objPassConfirmationRegister, Integer.valueOf(objTypeUser), objName).observe(RegisterFragment.this.requireActivity(), register -> {
                                 if (register != null) {
                                         Toast.makeText(RegisterFragment.this.requireActivity(), register.getStatus(), Toast.LENGTH_SHORT).show();
                                 } else {
