@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/kursusFragmentMainMenu"
+        android:id="@+id/kursusFragment"
 
         android:title="Kursus" />
-    <item
-        android:id="@+id/cariFragmentMainMenu"
+<!--    <item-->
+<!--        android:id="@+id/cariFragment"-->
 
-        android:title="Cari" />
+<!--        android:title="Cari" />-->
+<!--    <item-->
+<!--        android:id="@+id/rekomendasiFragmentMainMenu"-->
+<!--        android:title="Rekomendasi" />-->
     <item
-        android:id="@+id/rekomendasiFragmentMainMenu"
-        android:title="Rekomendasi" />
-    <item
-        android:id="@+id/profileFragmentMainMenu"
+        android:id="@+id/profileFragment"
 
         android:title="Profil" />
 </menu>

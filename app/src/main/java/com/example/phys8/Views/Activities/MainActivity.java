@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        AppBarConfiguration configuration = new AppBarConfiguration.Builder(R.id.kursusFragment, R.id.cariFragment, R.id.rekomendasiFragment, R.id.profileFragment).build();
+        AppBarConfiguration configuration = new AppBarConfiguration.Builder(R.id.kursusFragment, R.id.profileFragment).build();
         navController = nav_fragment_main_menu.getNavController();
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             if (destination.getId() == R.id.splashScreenFragment || destination.getId() == R.id.loginFragment
