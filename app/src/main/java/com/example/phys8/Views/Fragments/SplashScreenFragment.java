@@ -71,6 +71,6 @@ public class SplashScreenFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //kurang code jeda waktu untuk nampilin splash screen
-        Navigation.findNavController(view).navigate(R.id.loginFragment);
+        Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_loginFragment);
     }
 }

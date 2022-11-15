@@ -107,7 +107,7 @@ public class BerandaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
-                Navigation.findNavController(v).navigate(R.id.action_berandaFragment_to_profileFragment);
+                //Navigation.findNavController(v).navigate(R.id.action_berandaFragment_to_profileFragment);
             }
         });
 
@@ -115,7 +115,7 @@ public class BerandaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
-                Navigation.findNavController(view).navigate(R.id.action_berandaFragment_to_pilihLevelFragment);
+                //Navigation.findNavController(view).navigate(R.id.action_berandaFragment_to_pilihLevelFragment);
             }
         });
 
@@ -129,7 +129,7 @@ public class BerandaFragment extends Fragment {
                         helper.clearPref();
 
                         Toast.makeText(requireActivity(), s, Toast.LENGTH_SHORT).show();
-                        Navigation.findNavController(v).navigate(R.id.action_berandaFragment_to_loginFragment);
+                       // Navigation.findNavController(v).navigate(R.id.action_berandaFragment_to_loginFragment);
                     }
                 });
             }

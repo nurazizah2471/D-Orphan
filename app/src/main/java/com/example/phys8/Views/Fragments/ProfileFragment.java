@@ -109,7 +109,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
-                Navigation.findNavController(v).navigate(R.id.action_profileFragment_to_peringkatFragment);
+               // Navigation.findNavController(v).navigate(R.id.action_profileFragment_to_peringkatFragment);
             }
         });
 
@@ -117,7 +117,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
-                Navigation.findNavController(v).navigate(R.id.action_profileFragment_to_historyFragment);
+             //   Navigation.findNavController(v).navigate(R.id.action_profileFragment_to_historyFragment);
             }
         });
     }

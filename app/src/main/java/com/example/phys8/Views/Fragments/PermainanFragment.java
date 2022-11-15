@@ -26,7 +26,6 @@ import com.example.phys8.Adapters.rvAdapter_ikonBenarSalahKuis;
 import com.example.phys8.Adapters.rvAdapter_pilgan;
 import com.example.phys8.Helpers.ItemClickSupport;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
-import com.example.phys8.Models.GetQuestionWithHistoryId;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.QuizHistory;
 import com.example.phys8.R;
@@ -137,7 +136,7 @@ public class PermainanFragment extends Fragment {
 
     private void getQuestionWithHistoryId(String quizHistoryId) {
         permainanViewModel.getQuestionWithHistoryId(quizHistoryId);
-        permainanViewModel.getResultQuestionWithHistoryId().observe(getActivity(), showResultQuestionWithHistoryId);
+        //permainanViewModel.getResultQuestionWithHistoryId().observe(getActivity(), showResultQuestionWithHistoryId);
     }
 
     private void addItemClickSupport(){
@@ -191,12 +190,12 @@ public class PermainanFragment extends Fragment {
         }
     };
 
-    private Observer<List<GetQuestionWithHistoryId.Result>> showResultQuestionWithHistoryId = new Observer<List<GetQuestionWithHistoryId.Result>>() {
-        @Override
-        public void onChanged(List<GetQuestionWithHistoryId.Result> results) {
-            setRv_IkonBenarSalah(results.get(0).getQuestion(), results.get(0));
-        }
-    };
+//    private Observer<List<GetQuestionWithHistoryId.Result>> showResultQuestionWithHistoryId = new Observer<List<GetQuestionWithHistoryId.Result>>() {
+//        @Override
+//        public void onChanged(List<GetQuestionWithHistoryId.Result> results) {
+//            setRv_IkonBenarSalah(results.get(0).getQuestion(), results.get(0));
+//        }
+//    };
 
     private void showNextQuestion() {
         rv_PilihanGanda_FragmentPermainan.setVisibility(View.VISIBLE);
@@ -217,7 +216,7 @@ public class PermainanFragment extends Fragment {
             }, 300);
             startCountDown();
         }else{
-            finishQuiz();
+          //  finishQuiz();
         }
     }
 
@@ -255,22 +254,22 @@ public class PermainanFragment extends Fragment {
         }
     }
 
-    private void finishQuiz() {
-        Navigation.findNavController(myv).navigate(R.id.action_permainanFragment_to_berandaFragment);
-        Toast.makeText(getActivity(),"Permainan berakhir", Toast.LENGTH_SHORT).show();
-    }
+//    private void finishQuiz() {
+//        Navigation.findNavController(myv).navigate(R.id.action_permainanFragment_to_berandaFragment);
+//        Toast.makeText(getActivity(),"Permainan berakhir", Toast.LENGTH_SHORT).show();
+//    }
 
-    private void setRv_IkonBenarSalah(List<GetQuestionWithHistoryId.Result.Question> questions, GetQuestionWithHistoryId.Result objResult){
-        if(questions.size()==0){
-            questionSize = 10;
-        }else{
-            questionSize = questions.size();
-        }
-        rv_IkonBenarSalah_FragmentPermainan.setLayoutManager(new GridLayoutManager(getContext(), questionSize));
-        adapter_ikonBenarSalahKuis = new rvAdapter_ikonBenarSalahKuis(getActivity(), objResult);
-        adapter_ikonBenarSalahKuis.setListQuestionUserAdapter(questions, helper.getUserId());
-        rv_IkonBenarSalah_FragmentPermainan.setAdapter(adapter_ikonBenarSalahKuis);
-    }
+//    private void setRv_IkonBenarSalah(List<GetQuestionWithHistoryId.Result.Question> questions, GetQuestionWithHistoryId.Result objResult){
+//        if(questions.size()==0){
+//            questionSize = 10;
+//        }else{
+//            questionSize = questions.size();
+//        }
+//        rv_IkonBenarSalah_FragmentPermainan.setLayoutManager(new GridLayoutManager(getContext(), questionSize));
+//        adapter_ikonBenarSalahKuis = new rvAdapter_ikonBenarSalahKuis(getActivity(), objResult);
+//        adapter_ikonBenarSalahKuis.setListQuestionUserAdapter(questions, helper.getUserId());
+//        rv_IkonBenarSalah_FragmentPermainan.setAdapter(adapter_ikonBenarSalahKuis);
+//    }
     private void setRv_pilgan(List<GetQuestionWithLevelid.Result.AnswerOption> answerOptionsList){
           rv_PilihanGanda_FragmentPermainan.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
           AdapterPilgan = new rvAdapter_pilgan(getActivity());
