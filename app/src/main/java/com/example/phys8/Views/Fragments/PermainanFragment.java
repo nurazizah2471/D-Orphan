@@ -22,7 +22,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.phys8.Adapters.rvAdapter_ikonBenarSalahKuis;
 import com.example.phys8.Adapters.rvAdapter_pilgan;
 import com.example.phys8.Helpers.ItemClickSupport;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
@@ -105,7 +104,6 @@ public class PermainanFragment extends Fragment {
     private QuizHistoryViewModel quizHistoryViewModel;
     private ConstraintLayout loadPermainan;
     private boolean answered;
-    private rvAdapter_ikonBenarSalahKuis adapter_ikonBenarSalahKuis;
     private String levelId, quizHistoryId, checkAvailable, activeReward;
     private MediaPlayer mediaPlayerCorrect, mediaPlayerWrong;
 
@@ -135,7 +133,7 @@ public class PermainanFragment extends Fragment {
     }
 
     private void getQuestionWithHistoryId(String quizHistoryId) {
-        permainanViewModel.getQuestionWithHistoryId(quizHistoryId);
+        //permainanViewModel.getQuestionWithHistoryId(quizHistoryId);
         //permainanViewModel.getResultQuestionWithHistoryId().observe(getActivity(), showResultQuestionWithHistoryId);
     }
 
