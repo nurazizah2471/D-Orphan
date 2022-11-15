@@ -72,4 +72,9 @@
         android:name="com.example.phys8.CariKursusFragment"
         android:label="fragment_cari_kursus"
         tools:layout="@layout/fragment_cari_kursus" />
+    <fragment
+        android:id="@+id/kursusPesananPantiFragment"
+        android:name="com.example.phys8.KursusPesananPantiFragment"
+        android:label="fragment_kursus_pesanan_panti"
+        tools:layout="@layout/fragment_kursus_pesanan_panti" />
 </navigation>
