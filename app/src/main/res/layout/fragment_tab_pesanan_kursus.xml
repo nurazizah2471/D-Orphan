@@ -7,7 +7,7 @@
     tools:context=".Views.Fragments.TabPesananKursus">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tab_pesanan_item_rycyclerView"
+            android:id="@+id/rv_tab_pesanan_item_rycyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"

@@ -7,24 +7,24 @@ import com.google.gson.Gson;
 
 import java.util.List;
 
-public class GetCourseBooking implements Parcelable {
+public class CourseBooking implements Parcelable {
     private List<Result> result;
 
 
     ////////////////////
 
-    protected GetCourseBooking(Parcel in) {
+    protected CourseBooking(Parcel in) {
     }
 
-    public static final Creator<GetCourseBooking> CREATOR = new Creator<GetCourseBooking>() {
+    public static final Creator<CourseBooking> CREATOR = new Creator<CourseBooking>() {
         @Override
-        public GetCourseBooking createFromParcel(Parcel in) {
-            return new GetCourseBooking(in);
+        public CourseBooking createFromParcel(Parcel in) {
+            return new CourseBooking(in);
         }
 
         @Override
-        public GetCourseBooking[] newArray(int size) {
-            return new GetCourseBooking[size];
+        public CourseBooking[] newArray(int size) {
+            return new CourseBooking[size];
         }
     };
 
@@ -39,9 +39,9 @@ public class GetCourseBooking implements Parcelable {
     }
     //////////////////
 
-    public static GetCourseBooking objectFromData(String str) {
+    public static CourseBooking objectFromData(String str) {
 
-        return new Gson().fromJson(str, GetCourseBooking.class);
+        return new Gson().fromJson(str, CourseBooking.class);
     }
 
     public List<Result> getResult() {
