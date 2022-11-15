@@ -3,20 +3,17 @@ package com.example.phys8.Views.Fragments;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.phys8.R;
 import com.example.phys8.ViewModels.RegisterViewModel;
@@ -76,8 +73,7 @@ public class RegisterFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_register, container, false);
     }
 
-    private TextInputLayout til_email_fragment_register, til_password_fragment_register, til_password_confirmation_fragment_register,
-            til_name_fragment_register;
+    private TextInputLayout til_nama_fragment_register, til_surel_fragment_register, til_kata_sandi_fragment_register, til_konfirmasi_kata_sandi_fragment_register;
     private Button btn_daftar_fragment_register;
     private RegisterViewModel registerViewModel;
     private RadioGroup rg_type_user_fragment_register;
@@ -86,13 +82,13 @@ public class RegisterFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-            initial(view);
-            rg_type_user_change();
-            registerProccess();
+        initial(view);
+        rg_type_user_change();
+        registerProccess();
     }
 
-    private void rg_type_user_change(){
-        rg_type_user_fragment_register.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+    private void rg_type_user_change() {
+        rg_type_user_fragment_register.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -108,31 +104,32 @@ public class RegisterFragment extends Fragment {
             }
         });
     }
-    private void registerProccess(){
+
+    private void registerProccess() {
         btn_daftar_fragment_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                AlertDialog.Builder alert= new AlertDialog.Builder(getActivity());
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
                 alert.setTitle("Konfirmasi");
                 alert.setMessage("Data akan disimpan. Apakah kamu yakin?");
                 alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        objEmailRegister = til_email_fragment_register.getEditText().getText().toString().trim();
-                        objPassRegister = til_password_fragment_register.getEditText().getText().toString().trim();
-                        objPassConfirmationRegister = til_password_confirmation_fragment_register.getEditText().getText().toString().trim();
-                        objName = til_name_fragment_register.getEditText().getText().toString().trim();
+                        objName = til_nama_fragment_register.getEditText().getText().toString().trim();
+                        objEmailRegister = til_surel_fragment_register.getEditText().getText().toString().trim();
+                        objPassRegister = til_kata_sandi_fragment_register.getEditText().getText().toString().trim();
+                        objPassConfirmationRegister = til_konfirmasi_kata_sandi_fragment_register.getEditText().getText().toString().trim();
 
-                        if (objEmailRegister != null && objPassRegister != null && objPassConfirmationRegister != null && objTypeUser != null && objName != null){
+                        if (objEmailRegister != null && objPassRegister != null && objPassConfirmationRegister != null && objTypeUser != null && objName != null) {
                             registerViewModel.register(objEmailRegister, objPassRegister, objPassConfirmationRegister, Integer.valueOf(objTypeUser), objName).observe(RegisterFragment.this.requireActivity(), register -> {
                                 if (register != null) {
-                                        Toast.makeText(RegisterFragment.this.requireActivity(), register.getStatus(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterFragment.this.requireActivity(), register.getStatus(), Toast.LENGTH_SHORT).show();
                                 } else {
                                     Toast.makeText(RegisterFragment.this.requireActivity(), "Terjadi kesalahan", Toast.LENGTH_SHORT).show();
                                 }
                             });
-                    }
+                        }
                     }
                 });
                 alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -147,10 +144,10 @@ public class RegisterFragment extends Fragment {
     }
 
     private void initial(View view) {
-        til_email_fragment_register = getActivity().findViewById(R.id.til_email_fragment_register);
-        til_password_fragment_register = getActivity().findViewById(R.id.til_password_fragment_register);
-        til_password_confirmation_fragment_register = getActivity().findViewById(R.id.til_password_confirmation_fragment_register);
-        til_name_fragment_register = getActivity().findViewById(R.id.til_name_fragment_register);
+        til_surel_fragment_register = getActivity().findViewById(R.id.til_surel_fragment_register);
+        til_kata_sandi_fragment_register = getActivity().findViewById(R.id.til_kata_sandi_fragment_register);
+        til_konfirmasi_kata_sandi_fragment_register = getActivity().findViewById(R.id.til_konfirmasi_kata_sandi_fragment_register);
+        til_nama_fragment_register = getActivity().findViewById(R.id.til_nama_fragment_register);
 
         btn_daftar_fragment_register = view.findViewById(R.id.btn_daftar_fragment_register);
         rg_type_user_fragment_register = view.findViewById(R.id.rg_type_user_fragment_register);

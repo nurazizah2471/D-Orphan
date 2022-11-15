@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/bg_label.xml" value="0.182" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/bg_splash_screen.xml" value="0.166" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/btn_primary.xml" value="0.159" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/drawable/btn_secondary.xml" value="0.159" />
@@ -15,17 +16,29 @@
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/font/be_vietnam.xml" value="0.14539473684210527" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/font/be_vietnam_semibold.xml" value="0.14539473684210527" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/card_pesanan_kursus_fragment_kursus.xml" value="0.1" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/card_peserta_kursus.xml" value="0.3333333333333333" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_beranda.xml" value="0.11277173913043478" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_cari.xml" value="0.11612021857923498" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_detail_panti_asuhan_tutor.xml" value="0.16666666666666666" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_detail_rekomendasi_tutor.xml" value="0.13333333333333333" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_history.xml" value="0.11612021857923498" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_kursus.xml" value="0.11612021857923498" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_leaderboard.xml" value="0.12631578947368421" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_log_in_panti.xml" value="0.16666666666666666" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_log_in_tutor.xml" value="0.22" />
-        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_login.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_permainan.xml" value="0.11612021857923498" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_profil.xml" value="0.11612021857923498" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_profil_panti.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_register.xml" value="0.16666666666666666" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_rekomendasi.xml" value="0.11612021857923498" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_sign_up_panti.xml" value="0.16666666666666666" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_splash_screen.xml" value="0.14666666666666667" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_tab_berlangsung_kursus.xml" value="0.11612021857923498" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_tab_pesanan_kursus.xml" value="0.11612021857923498" />
+        <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_tab_riwayat_kursus.xml" value="0.11612021857923498" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/fragment_tabview_log_in.xml" value="0.14666666666666667" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout.xml" value="0.11277173913043478" />
         <entry key="..\:/UC/1.IMT/1.Kelas_Mata_Kuliah/5.Semester_V/6.Software_Engineering/2.Tugas/D-Orphan/app/src/main/res/layout/layout_alert_sign_out_panti.xml" value="0.22" />

@@ -1,18 +1,16 @@
 package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.phys8.Helpers.SharedPreferenceHelper;
 import com.example.phys8.Models.User;
@@ -78,6 +76,7 @@ public class ProfileFragment extends Fragment {
     private TextView txt_alamat_fragment_profile, txt_email_fragment_profile,
             txt_bergabung_sejak_fragment_profile, txt_deskripsi_fragment_profile,
             txt_name_fragment_profile;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
