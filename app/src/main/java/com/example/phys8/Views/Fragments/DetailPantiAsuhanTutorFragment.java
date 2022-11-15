@@ -1,18 +1,21 @@
-package com.example.phys8;
+package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
+import com.example.phys8.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LombaPantiFragment#newInstance} factory method to
+ * Use the {@link DetailPantiAsuhanTutorFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LombaPantiFragment extends Fragment {
+public class DetailPantiAsuhanTutorFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +26,7 @@ public class LombaPantiFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LombaPantiFragment() {
+    public DetailPantiAsuhanTutorFragment() {
         // Required empty public constructor
     }
 
@@ -33,11 +36,11 @@ public class LombaPantiFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LombaFragment.
+     * @return A new instance of fragment DetailPantiAsuhanTutorFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LombaPantiFragment newInstance(String param1, String param2) {
-        LombaPantiFragment fragment = new LombaPantiFragment();
+    public static DetailPantiAsuhanTutorFragment newInstance(String param1, String param2) {
+        DetailPantiAsuhanTutorFragment fragment = new DetailPantiAsuhanTutorFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,6 +61,12 @@ public class LombaPantiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lomba_tutor, container, false);
+        return inflater.inflate(R.layout.fragment_detail_panti_asuhan_tutor, container, false);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
     }
 }

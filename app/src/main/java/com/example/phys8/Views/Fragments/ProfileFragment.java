@@ -105,12 +105,6 @@ public class ProfileFragment extends Fragment {
         }
     };
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        getActivity().getViewModelStore().clear();
-    }
-
     private void initial() {
         txt_name_fragment_profile = getActivity().findViewById(R.id.txt_name_fragment_profile);
         txt_email_fragment_profile = getActivity().findViewById(R.id.txt_email_fragment_profile);
@@ -120,5 +114,11 @@ public class ProfileFragment extends Fragment {
 
         helper = SharedPreferenceHelper.getInstance(requireActivity());
         profileViewModel = new ViewModelProvider(getActivity()).get(ProfileViewModel.class);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
     }
 }

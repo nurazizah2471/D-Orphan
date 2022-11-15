@@ -1,4 +1,4 @@
-package com.example.phys8;
+package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.phys8.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +62,11 @@ public class DetailRekomendasiTutorFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail_rekomendasi_tutor, container, false);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
     }
 }

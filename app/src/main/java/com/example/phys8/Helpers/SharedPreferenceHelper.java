@@ -26,10 +26,9 @@ public class SharedPreferenceHelper {
         return instance;
     }
 
-    public static void saveAccessToken(String token, String userIdobj, String userTypeobj){
+    public static void saveAccessToken(String token, String userIdobj){
         prefs.edit().putString(PREFS, token).apply();
         userId.edit().putString(USERID, userIdobj).apply();
-
     }
 
     public static void saveUserId(String userIdobj){

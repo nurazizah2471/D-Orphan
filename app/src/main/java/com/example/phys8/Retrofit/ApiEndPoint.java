@@ -37,7 +37,7 @@ public interface ApiEndPoint {
     @FormUrlEncoded
     Call<JsonObject> logout(@Field("student_id") String student_id);
 
-    @GET("myuser")
+    @GET("user")
     Call<User> getUsers();
 
     @GET("question/{levelId}")
@@ -82,8 +82,7 @@ public interface ApiEndPoint {
 
     @POST("all_data_course_booking")
     @FormUrlEncoded
-    Call<CourseBooking> getCourseBooking(@Field("user_id") String user_id,
-                                         @Field("type_user") int type_user);
+    Call<CourseBooking> getCourseBooking(@Field("user_id") String user_id);
 
     @POST("add_reward")
     @FormUrlEncoded

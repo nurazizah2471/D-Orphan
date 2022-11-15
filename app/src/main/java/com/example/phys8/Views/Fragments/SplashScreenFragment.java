@@ -58,4 +58,10 @@ public class SplashScreenFragment extends Fragment {
         }, splashtime);
         Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_loginFragment);
     }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
+    }
 }

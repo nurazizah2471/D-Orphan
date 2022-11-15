@@ -104,4 +104,5 @@ public class KursusFragment extends Fragment {
         tabLayout_list_kursus_fragment_kursus=view.findViewById(R.id.tabLayout_list_kursus_fragment_kursus);
         viewpager_list_kursus_fragment_kursus=view.findViewById(R.id.viewpager_list_kursus_fragment_kursus);
     }
+
 }

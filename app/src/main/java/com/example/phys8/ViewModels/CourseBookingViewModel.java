@@ -28,10 +28,16 @@ public class CourseBookingViewModel extends AndroidViewModel {
     }
 
     private MutableLiveData<List<CourseBooking.Result>> resultGetCourseBooking = new MutableLiveData<>();
-    public void getCourseBooking(String user_id, int type_user){
-        resultGetCourseBooking = courseBookingRepository.getCourseBooking(user_id, type_user);
+    public void getCourseBooking(String user_id){
+        resultGetCourseBooking = courseBookingRepository.getCourseBooking(user_id);
     }
     public LiveData<List<CourseBooking.Result>> getResultGetCourseBooking(){
         return resultGetCourseBooking;
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        courseBookingRepository.resetInstance();
     }
 }

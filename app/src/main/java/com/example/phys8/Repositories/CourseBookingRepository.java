@@ -35,10 +35,10 @@ public class CourseBookingRepository {
         }
     }
 
-    public MutableLiveData<List<CourseBooking.Result>> getCourseBooking(String user_id, int type_user){
+    public MutableLiveData<List<CourseBooking.Result>> getCourseBooking(String user_id){
         final MutableLiveData<List<CourseBooking.Result>> listCourseBooking = new MutableLiveData<>();
 
-        apiService.getCourseBooking(user_id, type_user).enqueue(new Callback<CourseBooking>() {
+        apiService.getCourseBooking(user_id).enqueue(new Callback<CourseBooking>() {
             @Override
             public void onResponse(Call<CourseBooking> call, Response<CourseBooking> response) {
                 if (response.isSuccessful()){

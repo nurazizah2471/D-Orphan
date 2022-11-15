@@ -64,4 +64,10 @@ public class TabBerlangsungKursus extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tab_berlangsung_kursus, container, false);
     }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
+    }
 }

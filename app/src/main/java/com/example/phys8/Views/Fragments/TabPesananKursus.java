@@ -7,22 +7,28 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.phys8.Adapters.rvAdapter_level;
 import com.example.phys8.Adapters.rvAdapter_tabBerlangsungKursus;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
+import com.example.phys8.Models.CourseBooking;
 import com.example.phys8.Models.Level;
 import com.example.phys8.R;
 import com.example.phys8.ViewModels.CourseBookingViewModel;
 import com.example.phys8.ViewModels.PermainanViewModel;
+import com.example.phys8.ViewModels.ProfileViewModel;
 import com.example.phys8.ViewModels.QuizHistoryViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -79,23 +85,63 @@ public class TabPesananKursus extends Fragment {
         return inflater.inflate(R.layout.fragment_tab_pesanan_kursus, container, false);
     }
 
-//    private RecyclerView rv_tab_pesanan_item_rycyclerView;
-//    private rvAdapter_tabBerlangsungKursus adapter_tabBerlangsungKursus;
-//    private CourseBookingViewModel;
-//    private QuizHistoryViewModel quizHistoryViewModel;
-//    private SharedPreferenceHelper helper;
-//    private int numberOfColumns, bundleLevelId, score_level, money_level, ticket_level, positions;
-//    private View myv;
-//    String checkAvailable;
-//    private Bundle bundle;
-//    private List<Level.Result> arrayListLevel;
-//    private MediaPlayer mediaPlayer;
-//    private ConstraintLayout loadLevel;
-//    @Override
-//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-//        initial(view);
-//        rg_type_user_change();
-//        registerProccess();
-//    }
+
+    private CourseBookingViewModel courseBookingViewModel;
+    private SharedPreferenceHelper helper;
+    private TextView txt_nama_panti1_tab_pesanan_kursus_fragment_panti, txt_kategori_panti1_tab_pesanan_kursus_fragment_panti,
+            txt_money1_tab_pesanan_kursus_fragment_panti, txt_time1_tab_pesanan_kursus_fragment_panti, txt_date1_tab_pesanan_kursus_fragment_panti,
+            txt_nama_panti2_tab_pesanan_kursus_fragment_panti, txt_kategori_panti2_tab_pesanan_kursus_fragment_panti, txt_money2_tab_pesanan_kursus_fragment_panti,
+            txt_time2_tab_pesanan_kursus_fragment_panti, txt_date2_tab_pesanan_kursus_fragment_panti, txt_nama_panti3_tab_pesanan_kursus_fragment_panti, txt_kategori_panti3_tab_pesanan_kursus_fragment_panti,
+            txt_money3_tab_pesanan_kursus_fragment_panti, txt_time3_tab_pesanan_kursus_fragment_panti, txt_date3_tab_pesanan_kursus_fragment_panti;
+    
+    private Button btn_batal1_tab_pesanan_kursus_fragment_panti, btn_batal2_tab_pesanan_kursus_fragment_panti, btn_batal3_tab_pesanan_kursus_fragment_panti;
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initial();
+
+        courseBookingViewModel.init(helper.getAccessToken()); //unsend
+        courseBookingViewModel.getCourseBooking(helper.getUserId());
+        courseBookingViewModel.getResultGetCourseBooking().observe(getActivity(), showResultGetCourseBooking);
+    }
+
+    private Observer<List<CourseBooking.Result>> showResultGetCourseBooking = new Observer<List<CourseBooking.Result>>() {
+        @Override
+        public void onChanged(List<CourseBooking.Result> results) {
+            for(int i=0;i<results.size();i++){
+                if(results.get(i).getStatus()){
+                    txt_kategori_panti1_tab_pesanan_kursus_fragment_panti.setText(results.get(i).getCourse());
+                }
+            }
+        }
+    };
+
+    private void initial() {
+        txt_nama_panti1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_nama_panti1_tab_pesanan_kursus_fragment_panti);
+        txt_kategori_panti1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_kategori_panti1_tab_pesanan_kursus_fragment_panti);
+        txt_money1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_money1_tab_pesanan_kursus_fragment_panti);
+        txt_time1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_time1_tab_pesanan_kursus_fragment_panti);
+        txt_date1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_date1_tab_pesanan_kursus_fragment_panti);
+        txt_nama_panti2_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_nama_panti2_tab_pesanan_kursus_fragment_panti);
+        txt_kategori_panti2_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_kategori_panti2_tab_pesanan_kursus_fragment_panti);
+        txt_money2_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_money2_tab_pesanan_kursus_fragment_panti);
+        txt_time2_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_time2_tab_pesanan_kursus_fragment_panti);
+        txt_date2_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_date2_tab_pesanan_kursus_fragment_panti);
+        txt_nama_panti3_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_nama_panti3_tab_pesanan_kursus_fragment_panti);
+        txt_kategori_panti3_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_kategori_panti3_tab_pesanan_kursus_fragment_panti);
+        txt_money3_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_money3_tab_pesanan_kursus_fragment_panti);
+        txt_time3_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_time3_tab_pesanan_kursus_fragment_panti);
+        txt_date3_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_date3_tab_pesanan_kursus_fragment_panti);
+
+        helper = SharedPreferenceHelper.getInstance(requireActivity());
+        courseBookingViewModel = new ViewModelProvider(getActivity()).get(CourseBookingViewModel.class);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
+    }
 }

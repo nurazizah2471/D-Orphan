@@ -88,5 +88,5 @@ public class ApiService {
     public Call<User> getUserWithId(String userId) {return api.getUserWithId(userId);}
     public Call<JsonObject> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active) {return api.updateRewardQuiz(quiz_history_id, score_level, money_level, ticket_level, student_id, active);}
 
-    public Call<CourseBooking> getCourseBooking(String user_id, int type_user){ return api.getCourseBooking(user_id, type_user); }
+    public Call<CourseBooking> getCourseBooking(String user_id){ return api.getCourseBooking(user_id); }
 }

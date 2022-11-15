@@ -54,32 +54,32 @@
     </fragment>
     <fragment
         android:id="@+id/detailLombaTutorFragment"
-        android:name="com.example.phys8.DetailLombaFragment"
+        android:name="com.example.phys8.Views.Fragments.DetailLombaFragment"
         android:label="fragment_detail_lomba_tutor"
         tools:layout="@layout/fragment_detail_lomba" />
     <fragment
         android:id="@+id/detailPantiAsuhanTutorFragment"
-        android:name="com.example.phys8.DetailPantiAsuhanTutorFragment"
+        android:name="com.example.phys8.Views.Fragments.DetailPantiAsuhanTutorFragment"
         android:label="fragment_detail_panti_asuhan_tutor"
         tools:layout="@layout/fragment_detail_panti_asuhan_tutor" />
     <fragment
         android:id="@+id/detailRekomendasiTutorFragment"
-        android:name="com.example.phys8.DetailRekomendasiTutorFragment"
+        android:name="com.example.phys8.Views.Fragments.DetailRekomendasiTutorFragment"
         android:label="fragment_detail_rekomendasi_tutor"
         tools:layout="@layout/fragment_detail_rekomendasi_tutor" />
     <fragment
         android:id="@+id/cariKursusFragment"
-        android:name="com.example.phys8.CariKursusFragment"
+        android:name="com.example.phys8.Views.Fragments.CariKursusFragment"
         android:label="fragment_cari_kursus"
         tools:layout="@layout/fragment_cari_kursus" />
     <fragment
         android:id="@+id/kursusPesananTutorFragment"
-        android:name="com.example.phys8.KursusPesananTutorFragment"
+        android:name="com.example.phys8.Views.Fragments.KursusPesananTutorFragment"
         android:label="fragment_kursus_pesanan_tutor"
         tools:layout="@layout/fragment_kursus_pesanan_tutor" />
     <fragment
         android:id="@+id/cariTutorFragment"
-        android:name="com.example.phys8.CariTutorFragment"
+        android:name="com.example.phys8.Views.Fragments.CariTutorFragment"
         android:label="fragment_cari_tutor"
         tools:layout="@layout/fragment_cari_tutor" />
 </navigation>

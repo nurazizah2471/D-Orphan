@@ -123,7 +123,7 @@ public class LoginFragment extends Fragment {
                   if (tokenResponse != null) {
                       if(tokenResponse.getResult()!=null) {
                           btn_masuk_fragment_log_in.setEnabled(true);
-                          helper.saveAccessToken(tokenResponse.getResult().getAuthorization(), tokenResponse.getUserId(), tokenResponse.getType_user());
+                          helper.saveAccessToken(tokenResponse.getResult().getAuthorization(), tokenResponse.getUserId());
 
                           Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_kursusFragment);
                           Toast.makeText(LoginFragment.this.requireActivity(), tokenResponse.getStatus(), Toast.LENGTH_SHORT).show();
