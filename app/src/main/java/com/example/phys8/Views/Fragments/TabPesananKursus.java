@@ -102,21 +102,7 @@ public class TabPesananKursus extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initial();
 
-        courseBookingViewModel.init(helper.getAccessToken()); //unsend
-        courseBookingViewModel.getCourseBooking(helper.getUserId());
-        courseBookingViewModel.getResultGetCourseBooking().observe(getActivity(), showResultGetCourseBooking);
     }
-
-    private Observer<List<CourseBooking.Result>> showResultGetCourseBooking = new Observer<List<CourseBooking.Result>>() {
-        @Override
-        public void onChanged(List<CourseBooking.Result> results) {
-            for(int i=0;i<results.size();i++){
-                if(results.get(i).getStatus()){
-                    txt_kategori_panti1_tab_pesanan_kursus_fragment_panti.setText(results.get(i).getCourse());
-                }
-            }
-        }
-    };
 
     private void initial() {
         txt_nama_panti1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_nama_panti1_tab_pesanan_kursus_fragment_panti);

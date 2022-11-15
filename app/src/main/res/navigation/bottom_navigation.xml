@@ -71,7 +71,11 @@
         android:id="@+id/cariKursusFragment"
         android:name="com.example.phys8.Views.Fragments.CariKursusFragment"
         android:label="fragment_cari_kursus"
-        tools:layout="@layout/fragment_cari_kursus" />
+        tools:layout="@layout/fragment_cari_kursus" >
+        <action
+            android:id="@+id/action_cariKursusFragment_to_cariTutorFragment"
+            app:destination="@id/cariTutorFragment" />
+    </fragment>
     <fragment
         android:id="@+id/kursusPesananTutorFragment"
         android:name="com.example.phys8.Views.Fragments.KursusPesananTutorFragment"
