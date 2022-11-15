@@ -76,11 +76,12 @@ public class RegisterFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_register, container, false);
     }
 
-    private TextInputLayout til_email_fragment_register, til_password_fragment_register, til_password_confirmation_fragment_register;
+    private TextInputLayout til_email_fragment_register, til_password_fragment_register, til_password_confirmation_fragment_register,
+            til_name_fragment_register;
     private Button btn_daftar_fragment_register;
     private RegisterViewModel registerViewModel;
     private RadioGroup rg_type_user_fragment_register;
-    private String objEmailRegister, objPassRegister, objPassConfirmationRegister, objTypeUser;
+    private String objEmailRegister, objPassRegister, objPassConfirmationRegister, objTypeUser, objName;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -121,8 +122,10 @@ public class RegisterFragment extends Fragment {
                         objEmailRegister = til_email_fragment_register.getEditText().getText().toString().trim();
                         objPassRegister = til_password_fragment_register.getEditText().getText().toString().trim();
                         objPassConfirmationRegister = til_password_confirmation_fragment_register.getEditText().getText().toString().trim();
-                        if (objEmailRegister != null && objPassRegister != null && objPassConfirmationRegister != null && objTypeUser != null){
-                            registerViewModel.register(objEmailRegister, objPassRegister, objPassConfirmationRegister, objTypeUser).observe(RegisterFragment.this.requireActivity(), register -> {
+                        objName = til_name_fragment_register.getEditText().getText().toString().trim();
+
+                        if (objEmailRegister != null && objPassRegister != null && objPassConfirmationRegister != null && objTypeUser != null && objName != null){
+                            registerViewModel.register(objEmailRegister, objPassRegister, objPassConfirmationRegister, objTypeUser, objName).observe(RegisterFragment.this.requireActivity(), register -> {
                                 if (register != null) {
                                         Toast.makeText(RegisterFragment.this.requireActivity(), register.getStatus(), Toast.LENGTH_SHORT).show();
                                 } else {
@@ -147,8 +150,11 @@ public class RegisterFragment extends Fragment {
         til_email_fragment_register = getActivity().findViewById(R.id.til_email_fragment_register);
         til_password_fragment_register = getActivity().findViewById(R.id.til_password_fragment_register);
         til_password_confirmation_fragment_register = getActivity().findViewById(R.id.til_password_confirmation_fragment_register);
+        til_name_fragment_register = getActivity().findViewById(R.id.til_name_fragment_register);
+
         btn_daftar_fragment_register = view.findViewById(R.id.btn_daftar_fragment_register);
         rg_type_user_fragment_register = view.findViewById(R.id.rg_type_user_fragment_register);
+
         registerViewModel = new ViewModelProvider(getActivity()).get(RegisterViewModel.class);
     }
 

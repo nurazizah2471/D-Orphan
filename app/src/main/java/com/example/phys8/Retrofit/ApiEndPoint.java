@@ -29,7 +29,9 @@ public interface ApiEndPoint {
     Call<Register> register(@Field("email") String email,
                             @Field("password") String password,
                             @Field("password_confirmation") String password_confirmation,
-                            @Field("type_user") String type_user);
+                            @Field("type_user") String type_user,
+                            @Field("name") String name
+    );
 
     @POST("logout")
     @FormUrlEncoded
