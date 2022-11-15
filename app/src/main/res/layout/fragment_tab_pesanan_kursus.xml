@@ -2,20 +2,506 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_fragment_tab_pesanan_kursus_tutor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Fragments.TabPesananKursus">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_tab_pesanan_item_rycyclerView"
+        <ScrollView
+            android:id="@+id/scrollView_fragment_tab_pesanan_kursus_tutor"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck">
 
-        </androidx.recyclerview.widget.RecyclerView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_scrollView_tab_pesanan_kursus_tutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv1_tab_pesanan_kursus_fragment_tutor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cons_cv1_tab_pesanan_kursus_fragment_tutor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/txt_nama_panti1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:text="Yayasan Kasih"
+                                            android:textColor="@color/black"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txt_kategori_panti1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:background="@drawable/tooltip"
+                                            android:padding="6dp"
+                                            android:text="Catur"
+                                            android:textColor="@color/blue500"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_panti1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_money1_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti1_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_money" />
+
+                                        <TextView
+                                            android:id="@+id/txt_money1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="18dp"
+                                            android:text="Rp50.000,00/jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_money1_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_time1_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_money1_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_time" />
+
+                                        <TextView
+                                            android:id="@+id/txt_time1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="1 Jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_time1_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_money1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_date1_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_time1_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_date" />
+
+                                        <TextView
+                                            android:id="@+id/txt_date1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="1 November"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_date1_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_time1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_tolak1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="24dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_secondary"
+                                            android:backgroundTint="@color/red500"
+                                            android:text="Tolak"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/red500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_terima1_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:background="@drawable/btn_primary"
+                                            android:backgroundTint="@color/green500"
+                                            android:text="Terima"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/btn_tolak1_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date1_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <View
+                                            android:id="@+id/divider1_card_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="7dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/blue500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv2_tab_pesanan_kursus_fragment_tutor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cv1_tab_pesanan_kursus_fragment_tutor">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cons_cv2_tab_pesanan_kursus_fragment_tutor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/txt_nama_panti2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:text="Bhakti Luhur"
+                                            android:textColor="@color/black"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txt_kategori_panti2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:background="@drawable/tooltip"
+                                            android:padding="6dp"
+                                            android:text="Catur"
+                                            android:textColor="@color/blue500"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_panti2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_money2_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti2_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_money" />
+
+                                        <TextView
+                                            android:id="@+id/txt_money2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="18dp"
+                                            android:text="Rp50.000,00/jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_money2_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_time2_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_money2_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_time" />
+
+                                        <TextView
+                                            android:id="@+id/txt_time2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="2 jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_time2_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_money2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_date2_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_time2_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_date" />
+
+                                        <TextView
+                                            android:id="@+id/txt_date2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="4 Desember"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_date2_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_time2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_tolak2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="24dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_secondary"
+                                            android:backgroundTint="@color/red500"
+                                            android:text="Tolak"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/red500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_terima2_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:background="@drawable/btn_primary"
+                                            android:backgroundTint="@color/green500"
+                                            android:text="Terima"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/btn_tolak2_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date2_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <View
+                                            android:id="@+id/divider2_card_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="7dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/blue500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv3_tab_pesanan_kursus_fragment_tutor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="24dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cv2_tab_pesanan_kursus_fragment_tutor">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cons_cv3_tab_pesanan_kursus_fragment_tutor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/txt_nama_panti3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:text="Budi Mulia"
+                                            android:textColor="@color/black"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txt_kategori_panti3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:background="@drawable/tooltip"
+                                            android:padding="6dp"
+                                            android:text="Catur"
+                                            android:textColor="@color/blue500"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_panti3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_money3_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti3_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_money" />
+
+                                        <TextView
+                                            android:id="@+id/txt_money3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="18dp"
+                                            android:text="Rp50.000,00/jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_money3_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_kategori_panti3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_time3_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_money3_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_time" />
+
+                                        <TextView
+                                            android:id="@+id/txt_time3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="3 jam"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_time3_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_money3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView_icon_date3_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/imageView_icon_time3_tab_pesanan_kursus_fragment_tutor"
+                                            app:srcCompat="@drawable/ic_date" />
+
+                                        <TextView
+                                            android:id="@+id/txt_date3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="12dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="8 November"
+                                            android:textColor="@color/grey500"
+                                            app:layout_constraintStart_toEndOf="@+id/imageView_icon_date3_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_time3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_tolak3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="24dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_secondary"
+                                            android:backgroundTint="@color/red500"
+                                            android:text="Tolak"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/red500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <Button
+                                            android:id="@+id/btn_terima3_tab_pesanan_kursus_fragment_tutor"
+                                            style="@style/D_OrphanTextView.Label"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:background="@drawable/btn_primary"
+                                            android:backgroundTint="@color/green500"
+                                            android:text="Terima"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/btn_tolak3_tab_pesanan_kursus_fragment_tutor"
+                                            app:layout_constraintTop_toBottomOf="@+id/txt_date3_tab_pesanan_kursus_fragment_tutor" />
+
+                                        <View
+                                            android:id="@+id/divider3_card_tab_pesanan_kursus_fragment_tutor"
+                                            android:layout_width="7dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/blue500"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
