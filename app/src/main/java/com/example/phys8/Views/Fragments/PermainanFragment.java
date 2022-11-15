@@ -164,11 +164,11 @@ public class PermainanFragment extends Fragment {
             }
 
             permainanViewModel.init(helper.getAccessToken()); //unsend
-            permainanViewModel.updateRewardQuiz(quizHistoryId, score_level, money_level, ticket_level, helper.getUserId(), activeReward).observe(requireActivity(), new Observer<String>() {
-                @Override
-                public void onChanged(String s) {
-                }
-            });
+//            permainanViewModel.updateRewardQuiz(quizHistoryId, score_level, money_level, ticket_level, helper.getUserId(), activeReward).observe(requireActivity(), new Observer<String>() {
+//                @Override
+//                public void onChanged(String s) {
+//                }
+//            });
             Toast.makeText(getActivity(), "Jawabanmu Benar!", Toast.LENGTH_SHORT).show();
         }else{
             mediaPlayerWrong.start();
