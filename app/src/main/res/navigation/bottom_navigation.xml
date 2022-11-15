@@ -85,5 +85,14 @@
         android:id="@+id/cariTutorFragment"
         android:name="com.example.phys8.Views.Fragments.CariTutorFragment"
         android:label="fragment_cari_tutor"
-        tools:layout="@layout/fragment_cari_tutor" />
+        tools:layout="@layout/fragment_cari_tutor" >
+        <action
+            android:id="@+id/action_cariTutorFragment_to_courseBookingFragment"
+            app:destination="@id/courseBookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseBookingFragment"
+        android:name="com.example.phys8.CourseBookingFragment"
+        android:label="fragment_course_booking"
+        tools:layout="@layout/fragment_course_booking" />
 </navigation>
