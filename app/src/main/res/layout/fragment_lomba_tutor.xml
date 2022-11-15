@@ -36,7 +36,7 @@
                 android:queryHint="Cari Lomba"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.SearchView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_preview_lomba_fragment_tutor"
