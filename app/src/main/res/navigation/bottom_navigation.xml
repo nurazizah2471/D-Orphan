@@ -37,16 +37,6 @@
         android:label="fragment_kursus"
         tools:layout="@layout/fragment_kursus" />
     <fragment
-        android:id="@+id/cariFragment"
-        android:name="com.example.phys8.Views.Fragments.CariFragment"
-        android:label="fragment_cari"
-        tools:layout="@layout/fragment_cari" />
-    <fragment
-        android:id="@+id/rekomendasiFragment"
-        android:name="com.example.phys8.Views.Fragments.rekomendasiFragment"
-        android:label="fragment_rekomendasi"
-        tools:layout="@layout/fragment_rekomendasi" />
-    <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.phys8.Views.Fragments.ProfileFragment"
         android:label="fragment_profile"
@@ -62,4 +52,19 @@
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/detailLombaTutorFragment"
+        android:name="com.example.phys8.DetailLombaTutorFragment"
+        android:label="fragment_detail_lomba_tutor"
+        tools:layout="@layout/fragment_detail_lomba_tutor" />
+    <fragment
+        android:id="@+id/detailPantiAsuhanTutorFragment"
+        android:name="com.example.phys8.DetailPantiAsuhanTutorFragment"
+        android:label="fragment_detail_panti_asuhan_tutor"
+        tools:layout="@layout/fragment_detail_panti_asuhan_tutor" />
+    <fragment
+        android:id="@+id/detailRekomendasiTutorFragment"
+        android:name="com.example.phys8.DetailRekomendasiTutorFragment"
+        android:label="fragment_detail_rekomendasi_tutor"
+        tools:layout="@layout/fragment_detail_rekomendasi_tutor" />
 </navigation>

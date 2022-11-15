@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_fragment_detail_lomba_tutor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView_fragment_detail_lomba_tutor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_scrollView_fragment_detail_lomba_tutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_fragment_detail_lomba_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="Detail Lomba"
+                app:titleTextAppearance="@style/D_OrphanTextView.Headline"
+                app:titleTextColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView_gambar_detail_lomba_fragment_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_fragment_detail_lomba_tutor"
+                app:srcCompat="@drawable/image_lomba" />
+
+            <TextView
+                android:id="@+id/txt_judul_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Asian Games 2022"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gambar_detail_lomba_fragment_tutor" />
+
+            <ImageView
+                android:id="@+id/imageView_icon_group_detail_lomba_fragment_tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul_detail_lomba_fragment_tutor"
+                app:srcCompat="@drawable/ic_group" />
+
+            <TextView
+                android:id="@+id/txt_penyelenggara_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Olympic Council of Asia"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/imageView_icon_group_detail_lomba_fragment_tutor"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul_detail_lomba_fragment_tutor" />
+
+            <TextView
+                android:id="@+id/txt_peserta_lomba_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Peserta Lomba"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_icon_group_detail_lomba_fragment_tutor" />
+
+            <TextView
+                android:id="@+id/txt_nama_peserta_lomba_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Ilham Kurniawan"
+                android:textColor="@color/grey500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_peserta_lomba_detail_lomba_fragment_tutor" />
+
+            <TextView
+                android:id="@+id/txt_kategori_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/tooltip"
+                android:padding="6dp"
+                android:text="Atletik"
+                android:textColor="@color/blue500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nama_peserta_lomba_detail_lomba_fragment_tutor" />
+
+            <ImageView
+                android:id="@+id/imageView_icon_date_detail_lomba_fragment_tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_kategori_detail_lomba_fragment_tutor"
+                app:srcCompat="@drawable/ic_date" />
+
+            <TextView
+                android:id="@+id/txt_date_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:text="06/08/2022"
+                android:textColor="@color/grey500"
+                app:layout_constraintStart_toEndOf="@+id/imageView_icon_date_detail_lomba_fragment_tutor"
+                app:layout_constraintTop_toBottomOf="@+id/txt_kategori_detail_lomba_fragment_tutor" />
+
+            <ImageView
+                android:id="@+id/imageView_cv_icon_time_detail_lomba_fragment_tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_icon_date_detail_lomba_fragment_tutor"
+                app:srcCompat="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/txt_time_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="07:30 s.d. 14:30"
+                android:textColor="@color/grey500"
+                app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_time_detail_lomba_fragment_tutor"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date_detail_lomba_fragment_tutor" />
+
+            <ImageView
+                android:id="@+id/imageView_icon_location_detail_lomba_fragment_tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_cv_icon_time_detail_lomba_fragment_tutor"
+                app:srcCompat="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/txt_location_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="Surabaya"
+                android:textColor="@color/grey500"
+                app:layout_constraintStart_toEndOf="@+id/imageView_icon_location_detail_lomba_fragment_tutor"
+                app:layout_constraintTop_toBottomOf="@+id/txt_time_detail_lomba_fragment_tutor" />
+
+            <TextView
+                android:id="@+id/txt_deskripsi_lomba_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Pesta Olahraga Asia adalah ajang multi-olahraga yang diselenggarakan setiap empat tahun sekali, dengan atlet-atlet dari seluruh Asia dan diselenggarakan oleh Dewan Olimpiade Asia."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_icon_location_detail_lomba_fragment_tutor" />
+
+            <Button
+                android:id="@+id/btn_tautan_lomba_detail_lomba_fragment_tutor"
+                style="@style/D_OrphanTextView.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_primary"
+                android:text="Tautan Lomba"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_deskripsi_lomba_detail_lomba_fragment_tutor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
