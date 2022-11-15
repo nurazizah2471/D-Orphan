@@ -54,9 +54,9 @@
     </fragment>
     <fragment
         android:id="@+id/detailLombaTutorFragment"
-        android:name="com.example.phys8.DetailLombaTutorFragment"
+        android:name="com.example.phys8.DetailLombaFragment"
         android:label="fragment_detail_lomba_tutor"
-        tools:layout="@layout/fragment_detail_lomba_tutor" />
+        tools:layout="@layout/fragment_detail_lomba" />
     <fragment
         android:id="@+id/detailPantiAsuhanTutorFragment"
         android:name="com.example.phys8.DetailPantiAsuhanTutorFragment"
