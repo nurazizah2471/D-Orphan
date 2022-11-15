@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 public class SharedPreferenceHelper {
-    private static final String PREFS = "pref";
+    private static final String PREFS = "prefs";
     private static SharedPreferenceHelper instance;
     private static SharedPreferences prefs;
     private static SharedPreferences userId;
