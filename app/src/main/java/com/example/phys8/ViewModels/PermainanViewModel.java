@@ -8,7 +8,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.phys8.Models.GetQuestionWithHistoryId;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.Level;
 import com.example.phys8.Repositories.AuthRepository;
@@ -49,15 +48,15 @@ public class PermainanViewModel extends AndroidViewModel {
     }
     public LiveData<List<Level.Result>> getResultLevel(){return resultLevel;}
 
-    private MutableLiveData<List<GetQuestionWithHistoryId.Result>> resultQuestionWithHistoryId = new MutableLiveData<>();
-    public void getQuestionWithHistoryId(String quizHistoryId){
-        resultQuestionWithHistoryId = permainanRepository.getQuestionWithHistoryId(quizHistoryId);
-    }
-    public LiveData<List<GetQuestionWithHistoryId.Result>> getResultQuestionWithHistoryId(){return resultQuestionWithHistoryId;}
-
-    public LiveData<String> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active){
-        return permainanRepository.updateRewardQuiz(quiz_history_id, score_level, money_level, ticket_level, student_id, active);
-    }
+//    private MutableLiveData<List<GetQuestionWithHistoryId.Result>> resultQuestionWithHistoryId = new MutableLiveData<>();
+//    public void getQuestionWithHistoryId(String quizHistoryId){
+//        resultQuestionWithHistoryId = permainanRepository.getQuestionWithHistoryId(quizHistoryId);
+//    }
+//    public LiveData<List<GetQuestionWithHistoryId.Result>> getResultQuestionWithHistoryId(){return resultQuestionWithHistoryId;}
+//
+//    public LiveData<String> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active){
+//        return permainanRepository.updateRewardQuiz(quiz_history_id, score_level, money_level, ticket_level, student_id, active);
+//    }
 
     @Override
     protected void onCleared() {

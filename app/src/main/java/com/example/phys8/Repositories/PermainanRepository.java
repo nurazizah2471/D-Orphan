@@ -5,7 +5,6 @@ import android.util.Log;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.phys8.Models.GetQuestionWithHistoryId;
 import com.example.phys8.Models.GetQuestionWithLevelid;
 import com.example.phys8.Models.Level;
 import com.example.phys8.Retrofit.ApiService;
@@ -97,24 +96,24 @@ public class PermainanRepository {
         return listLevel;
     }
 
-    public MutableLiveData<List<GetQuestionWithHistoryId.Result>> getQuestionWithHistoryId(String quizHistoryId){
-        final MutableLiveData<List<GetQuestionWithHistoryId.Result>> listQuestionWithHistoryId = new MutableLiveData<>();
-        apiService.getQuestionWithHistoryId(quizHistoryId).enqueue(new Callback<GetQuestionWithHistoryId>() {
-            @Override
-            public void onResponse(Call<GetQuestionWithHistoryId> call, Response<GetQuestionWithHistoryId> response) {
-                if (response.isSuccessful()){
-                    listQuestionWithHistoryId.postValue(response.body().getResult());
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<GetQuestionWithHistoryId> call, Throwable t) {
-            }
-        });
-
-        return listQuestionWithHistoryId;
-    }
+//    public MutableLiveData<List<GetQuestionWithHistoryId.Result>> getQuestionWithHistoryId(String quizHistoryId){
+//        final MutableLiveData<List<GetQuestionWithHistoryId.Result>> listQuestionWithHistoryId = new MutableLiveData<>();
+//        apiService.getQuestionWithHistoryId(quizHistoryId).enqueue(new Callback<GetQuestionWithHistoryId>() {
+//            @Override
+//            public void onResponse(Call<GetQuestionWithHistoryId> call, Response<GetQuestionWithHistoryId> response) {
+//                if (response.isSuccessful()){
+//                    listQuestionWithHistoryId.postValue(response.body().getResult());
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<GetQuestionWithHistoryId> call, Throwable t) {
+//            }
+//        });
+//
+//        return listQuestionWithHistoryId;
+//    }
 
     public LiveData<String> updateRewardQuiz(String quiz_history_id, int score_level, int money_level, int ticket_level, String student_id, String active){
         final MutableLiveData<String> message = new MutableLiveData<>();

@@ -31,7 +31,7 @@ public class CourseBookingViewModel extends AndroidViewModel {
     public void getCourseBooking(String user_id, int type_user){
         resultGetCourseBooking = courseBookingRepository.getCourseBooking(user_id, type_user);
     }
-    public LiveData<List<QuizHistory.Result>> getResultAddQuizHistory(){
-        return resultAddQuizHistory;
+    public LiveData<List<CourseBooking.Result>> getResultGetCourseBooking(){
+        return resultGetCourseBooking;
     }
 }

@@ -53,7 +53,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <Button
-                android:id="@+id/button_bayar_murid"
+                android:id="@+id/btn_batalkan_pesanan_fragment_kursus"
                 style="@style/D_OrphanTextView.Label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView_waktu_kursus_inpembayaran_murid" />
+                app:layout_constraintTop_toBottomOf="@+id/cardview_tanggal_pesanan_fragment_kursus" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageView2"
@@ -82,7 +82,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/cardView_nama_guru_inpembayaran_murid"
+                android:id="@+id/cardview_hargaperjam_pesanan_fragment_kursus"
                 style="@style/D_OrphanTextView.Body"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -93,26 +93,26 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <TextView
-                android:id="@+id/cardView_keahlian_guru_inpembayaran_murid"
+                android:id="@+id/cardview_jumlahjam_pesanan_fragment_kursus"
                 style="@style/D_OrphanTextView.Body"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Kursus selama 1 jam"
                 android:textColor="@color/grey500"
-                app:layout_constraintStart_toStartOf="@+id/cardView_nama_guru_inpembayaran_murid"
-                app:layout_constraintTop_toBottomOf="@+id/cardView_nama_guru_inpembayaran_murid" />
+                app:layout_constraintStart_toStartOf="@+id/cardview_hargaperjam_pesanan_fragment_kursus"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_hargaperjam_pesanan_fragment_kursus" />
 
             <TextView
-                android:id="@+id/cardView_waktu_kursus_inpembayaran_murid"
+                android:id="@+id/cardview_tanggal_pesanan_fragment_kursus"
                 style="@style/D_OrphanTextView.Body"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="1 November 2022"
                 android:textColor="@color/grey500"
-                app:layout_constraintStart_toStartOf="@+id/cardView_keahlian_guru_inpembayaran_murid"
-                app:layout_constraintTop_toBottomOf="@+id/cardView_keahlian_guru_inpembayaran_murid" />
+                app:layout_constraintStart_toStartOf="@+id/cardview_jumlahjam_pesanan_fragment_kursus"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_jumlahjam_pesanan_fragment_kursus" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

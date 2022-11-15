@@ -19,6 +19,7 @@ import com.example.phys8.Adapters.rvAdapter_tabBerlangsungKursus;
 import com.example.phys8.Helpers.SharedPreferenceHelper;
 import com.example.phys8.Models.Level;
 import com.example.phys8.R;
+import com.example.phys8.ViewModels.CourseBookingViewModel;
 import com.example.phys8.ViewModels.PermainanViewModel;
 import com.example.phys8.ViewModels.QuizHistoryViewModel;
 
@@ -78,23 +79,23 @@ public class TabPesananKursus extends Fragment {
         return inflater.inflate(R.layout.fragment_tab_pesanan_kursus, container, false);
     }
 
-    private RecyclerView rv_tab_pesanan_item_rycyclerView;
-    private rvAdapter_tabBerlangsungKursus adapter_tabBerlangsungKursus;
-    private  permainanViewModel;
-    private QuizHistoryViewModel quizHistoryViewModel;
-    private SharedPreferenceHelper helper;
-    private int numberOfColumns, bundleLevelId, score_level, money_level, ticket_level, positions;
-    private View myv;
-    String checkAvailable;
-    private Bundle bundle;
-    private List<Level.Result> arrayListLevel;
-    private MediaPlayer mediaPlayer;
-    private ConstraintLayout loadLevel;
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initial(view);
-        rg_type_user_change();
-        registerProccess();
-    }
+//    private RecyclerView rv_tab_pesanan_item_rycyclerView;
+//    private rvAdapter_tabBerlangsungKursus adapter_tabBerlangsungKursus;
+//    private CourseBookingViewModel;
+//    private QuizHistoryViewModel quizHistoryViewModel;
+//    private SharedPreferenceHelper helper;
+//    private int numberOfColumns, bundleLevelId, score_level, money_level, ticket_level, positions;
+//    private View myv;
+//    String checkAvailable;
+//    private Bundle bundle;
+//    private List<Level.Result> arrayListLevel;
+//    private MediaPlayer mediaPlayer;
+//    private ConstraintLayout loadLevel;
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//        initial(view);
+//        rg_type_user_change();
+//        registerProccess();
+//    }
 }
