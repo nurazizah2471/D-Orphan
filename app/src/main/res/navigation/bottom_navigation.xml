@@ -54,9 +54,9 @@
     </fragment>
     <fragment
         android:id="@+id/detailLombaTutorFragment"
-        android:name="com.example.phys8.DetailLombaTutorFragment"
+        android:name="com.example.phys8.DetailLombaFragment"
         android:label="fragment_detail_lomba_tutor"
-        tools:layout="@layout/fragment_detail_lomba_tutor" />
+        tools:layout="@layout/fragment_detail_lomba" />
     <fragment
         android:id="@+id/detailPantiAsuhanTutorFragment"
         android:name="com.example.phys8.DetailPantiAsuhanTutorFragment"
@@ -67,4 +67,9 @@
         android:name="com.example.phys8.DetailRekomendasiTutorFragment"
         android:label="fragment_detail_rekomendasi_tutor"
         tools:layout="@layout/fragment_detail_rekomendasi_tutor" />
+    <fragment
+        android:id="@+id/lombaFragment"
+        android:name="com.example.phys8.LombaTutorFragment"
+        android:label="fragment_lomba"
+        tools:layout="@layout/fragment_lomba_tutor" />
 </navigation>

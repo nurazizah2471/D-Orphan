@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_fragment_lomba_tutor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView_fragment_lomba_tutor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_scrollView_fragment_lomba_tutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_cari_lomba_fragment_tutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/btn_primary"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:queryBackground="@android:color/transparent"
+                android:queryHint="Cari Lomba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.SearchView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_preview_lomba_fragment_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_cari_lomba_fragment_tutor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_cv_preview_lomba_fragment_tutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_gambar_lomba_fragment_tutor"
+                        android:layout_width="0dp"
+                        android:layout_height="250dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/image_lomba" />
+
+                    <TextView
+                        android:id="@+id/txt_judul_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Asian Games"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_gambar_lomba_fragment_tutor" />
+
+                    <TextView
+                        android:id="@+id/txt_kategori_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/tooltip"
+                        android:padding="6dp"
+                        android:text="Atletik"
+                        android:textColor="@color/blue500"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_judul_lomba_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_date_lomba_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_kategori_lomba_fragment_tutor"
+                        app:srcCompat="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/txt_date_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="18dp"
+                        android:text="06/08/2022"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_date_lomba_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_kategori_lomba_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_time_lomba_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_icon_date_lomba_fragment_tutor"
+                        app:srcCompat="@drawable/ic_time" />
+
+                    <TextView
+                        android:id="@+id/txt_time_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:text="07:30 s.d. 14:30"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_time_lomba_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_date_lomba_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_location_lomba_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_icon_time_lomba_fragment_tutor"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/txt_location_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Surabaya"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_location_lomba_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_time_lomba_fragment_tutor" />
+
+                    <Button
+                        android:id="@+id/btn_tambah_peserta_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/btn_primary"
+                        android:text="Tambah Peserta"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_location_lomba_fragment_tutor" />
+
+                    <Button
+                        android:id="@+id/btn_ubah_lomba_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/btn_secondary"
+                        android:text="Ubah Lomba"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue500"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_tambah_peserta_lomba_fragment_tutor" />
+
+                    <TextView
+                        android:id="@+id/txt_hapus_lomba_lomba_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Hapus Lomba"
+                        android:textColor="@color/red500"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_ubah_lomba_lomba_fragment_tutor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_create_rekomendasi_lomba_fragment_tutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/blue500"
+                android:clickable="true"
+                android:focusable="auto"
+                android:src="@drawable/ic_add_fab"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_preview_lomba2_fragment_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_preview_lomba_fragment_tutor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_cv_preview_lomba2_fragment_tutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_gambar_lomba2_fragment_tutor"
+                        android:layout_width="0dp"
+                        android:layout_height="250dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/lomba2" />
+
+                    <TextView
+                        android:id="@+id/txt_judul_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Asian Games"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_gambar_lomba2_fragment_tutor" />
+
+                    <TextView
+                        android:id="@+id/txt_kategori_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/tooltip"
+                        android:padding="6dp"
+                        android:text="Atletik"
+                        android:textColor="@color/blue500"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_judul_lomba2_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_date_lomba2_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_kategori_lomba2_fragment_tutor"
+                        app:srcCompat="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/txt_date_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="18dp"
+                        android:text="06/08/2022"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_date_lomba2_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_kategori_lomba2_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_time_lomba2_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_icon_date_lomba2_fragment_tutor"
+                        app:srcCompat="@drawable/ic_time" />
+
+                    <TextView
+                        android:id="@+id/txt_time_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:text="07:30 s.d. 14:30"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_time_lomba2_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_date_lomba2_fragment_tutor" />
+
+                    <ImageView
+                        android:id="@+id/imageView_cv_icon_location_lomba2_fragment_tutor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_cv_icon_time_lomba2_fragment_tutor"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/txt_location_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Surabaya"
+                        android:textColor="@color/grey500"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_cv_icon_location_lomba2_fragment_tutor"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_time_lomba2_fragment_tutor" />
+
+                    <Button
+                        android:id="@+id/btn_tambah_peserta_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/btn_primary"
+                        android:text="Tambah Peserta"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_location_lomba2_fragment_tutor" />
+
+                    <Button
+                        android:id="@+id/btn_ubah_lomba_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/btn_secondary"
+                        android:text="Ubah Lomba"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue500"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_tambah_peserta_lomba2_fragment_tutor" />
+
+                    <TextView
+                        android:id="@+id/txt_hapus_lomba_lomba2_fragment_tutor"
+                        style="@style/D_OrphanTextView.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Hapus Lomba"
+                        android:textColor="@color/red500"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_ubah_lomba_lomba2_fragment_tutor" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
