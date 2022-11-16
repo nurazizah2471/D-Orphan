@@ -2,7 +2,11 @@ package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,6 +67,45 @@ public class CariTutorFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cari_tutor, container, false);
     }
+
+    private CardView cv_preview_lomba_fragment_tutor, cv_preview_lomba2_fragment_tutor, cv_preview_lomba3_fragment_tutor;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        initial();
+        cv_preview_lomba_fragment_tutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+
+            }
+        });
+        cv_preview_lomba2_fragment_tutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+
+            }
+        });
+        cv_preview_lomba3_fragment_tutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+
+            }
+        });
+
+    }
+
+
+
+    private void initial() {
+        cv_preview_lomba_fragment_tutor= getActivity().findViewById(R.id.cv_preview_lomba_fragment_tutor);
+        cv_preview_lomba2_fragment_tutor= getActivity().findViewById(R.id.cv_preview_lomba2_fragment_tutor);
+        cv_preview_lomba3_fragment_tutor= getActivity().findViewById(R.id.cv_preview_lomba3_fragment_tutor);}
+
 
     @Override
     public void onDetach() {

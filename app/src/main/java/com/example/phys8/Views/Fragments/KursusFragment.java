@@ -3,12 +3,17 @@ package com.example.phys8.Views.Fragments;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 
 import com.example.phys8.Adapters.rvAdapter_kursusFragment;
 import com.example.phys8.R;
@@ -34,6 +39,8 @@ public class KursusFragment extends Fragment {
     public KursusFragment() {
         // Required empty public constructor
     }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -100,6 +107,8 @@ public class KursusFragment extends Fragment {
         return view;
     }
 
+
+    rvAdapter_kursusFragment adapter;
     private void initialisasi(ViewGroup view) {
         tabLayout_list_kursus_fragment_kursus=view.findViewById(R.id.tabLayout_list_kursus_fragment_kursus);
         viewpager_list_kursus_fragment_kursus=view.findViewById(R.id.viewpager_list_kursus_fragment_kursus);

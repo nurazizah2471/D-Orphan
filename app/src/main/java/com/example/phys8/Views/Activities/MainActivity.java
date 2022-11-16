@@ -3,6 +3,7 @@ package com.example.phys8.Views.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
 //    private MediaPlayer mediaPlayer;
 
+    public void onClick_function(View v) {
+        Navigation.findNavController(v).navigate(R.id.action_kursusFragment_to_detailKursusFragment);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

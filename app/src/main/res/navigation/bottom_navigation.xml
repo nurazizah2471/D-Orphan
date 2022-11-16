@@ -35,7 +35,11 @@
         android:id="@+id/kursusFragment"
         android:name="com.example.phys8.Views.Fragments.KursusFragment"
         android:label="fragment_kursus"
-        tools:layout="@layout/fragment_kursus" />
+        tools:layout="@layout/fragment_kursus" >
+        <action
+            android:id="@+id/action_kursusFragment_to_detailKursusFragment"
+            app:destination="@id/detailKursusFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.phys8.Views.Fragments.ProfileFragment"
@@ -94,5 +98,23 @@
         android:id="@+id/courseBookingFragment"
         android:name="com.example.phys8.CourseBookingFragment"
         android:label="fragment_course_booking"
-        tools:layout="@layout/fragment_course_booking" />
+        tools:layout="@layout/fragment_course_booking" >
+        <action
+            android:id="@+id/action_courseBookingFragment_to_pemesananCourseFragment"
+            app:destination="@id/pemesananCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailKursusFragment"
+        android:name="com.example.phys8.DetailKursusFragment"
+        android:label="fragment_detail_kursus"
+        tools:layout="@layout/fragment_detail_kursus" />
+    <fragment
+        android:id="@+id/pemesananCourseFragment"
+        android:name="com.example.phys8.PemesananCourseFragment"
+        android:label="fragment_pemesanan_course"
+        tools:layout="@layout/fragment_pemesanan_course" />
+    <fragment
+        android:id="@+id/lombaPantiFragment"
+        android:name="com.example.phys8.Views.Fragments.LombaPantiFragment"
+        android:label="LombaPantiFragment" />
 </navigation>

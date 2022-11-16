@@ -2,13 +2,21 @@ package com.example.phys8.Views.Fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.phys8.Helpers.SharedPreferenceHelper;
 import com.example.phys8.R;
+import com.example.phys8.ViewModels.LoginViewModel;
+import com.example.phys8.ViewModels.UserViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,11 +70,62 @@ public class CariKursusFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cari_kursus, container, false);
+
     }
+
+    private CardView cv1_cari_kursus_fragment, cv2_cari_kursus_fragment, cv3_cari_kursus_fragment, cv4_cari_kursus_fragment;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        initial();
+        cv1_cari_kursus_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariKursusFragment_to_cariTutorFragment);
+
+            }
+        });
+        cv2_cari_kursus_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariKursusFragment_to_cariTutorFragment);
+
+            }
+        });
+        cv3_cari_kursus_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariKursusFragment_to_cariTutorFragment);
+
+            }
+        });
+        cv4_cari_kursus_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_cariKursusFragment_to_cariTutorFragment);
+
+            }
+        });
+    }
+
+    private void initial() {
+        cv1_cari_kursus_fragment= getActivity().findViewById(R.id.cv1_cari_kursus_fragment);
+        cv2_cari_kursus_fragment= getActivity().findViewById(R.id.cv2_cari_kursus_fragment);
+        cv3_cari_kursus_fragment= getActivity().findViewById(R.id.cv3_cari_kursus_fragment);
+        cv4_cari_kursus_fragment= getActivity().findViewById(R.id.cv4_cari_kursus_fragment);
+    }
+
 
     @Override
     public void onDetach() {
         super.onDetach();
         getActivity().getViewModelStore().clear();
     }
+
+
+
+
+
 }

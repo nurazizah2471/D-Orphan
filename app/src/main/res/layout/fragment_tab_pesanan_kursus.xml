@@ -35,7 +35,7 @@
                             app:cardPreventCornerOverlap="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">>
+                            app:layout_constraintTop_toTopOf="parent">
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:id="@+id/cons_cv1_tab_pesanan_kursus_fragment_panti"
@@ -184,8 +184,9 @@
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:id="@+id/cons_cv2_tab_pesanan_kursus_fragment_panti"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
+                                    android:layout_height="match_parent"
+                                    android:onClick="onClick_function"
+                                    >
                                         <TextView
                                             android:id="@+id/txt_nama_panti2_tab_pesanan_kursus_fragment_panti"
                                             style="@style/D_OrphanTextView.Title"

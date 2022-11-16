@@ -54,7 +54,7 @@ public class SplashScreenFragment extends Fragment {
             } else {
                 action = SplashScreenFragmentDirections.actionSplashScreenFragmentToLoginFragment();
             }
-            Navigation.findNavController(view).navigate(action);
+//            Navigation.findNavController(view).navigate(action);
         }, splashtime);
         Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_loginFragment);
     }

@@ -5,10 +5,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -37,6 +39,7 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class TabPesananKursus extends Fragment {
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -97,14 +100,14 @@ public class TabPesananKursus extends Fragment {
     private Button btn_batal1_tab_pesanan_kursus_fragment_panti, btn_batal2_tab_pesanan_kursus_fragment_panti, btn_batal3_tab_pesanan_kursus_fragment_panti;
 
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initial();
 
-    }
+    private CardView cv1_tab_pesanan_kursus_fragment_panti, cv2_tab_pesanan_kursus_fragment_panti, cv3_tab_pesanan_kursus_fragment_panti;
 
     private void initial() {
+
+        cv1_tab_pesanan_kursus_fragment_panti= getActivity().findViewById(R.id.cv1_tab_pesanan_kursus_fragment_panti); //kenapa null?
+        cv2_tab_pesanan_kursus_fragment_panti= getActivity().findViewById(R.id.cv2_tab_pesanan_kursus_fragment_panti);
+        cv3_tab_pesanan_kursus_fragment_panti= getActivity().findViewById(R.id.cv3_tab_pesanan_kursus_fragment_panti);
         txt_nama_panti1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_nama_panti1_tab_pesanan_kursus_fragment_panti);
         txt_kategori_panti1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_kategori_panti1_tab_pesanan_kursus_fragment_panti);
         txt_money1_tab_pesanan_kursus_fragment_panti = getActivity().findViewById(R.id.txt_money1_tab_pesanan_kursus_fragment_panti);
@@ -124,6 +127,40 @@ public class TabPesananKursus extends Fragment {
         helper = SharedPreferenceHelper.getInstance(requireActivity());
         courseBookingViewModel = new ViewModelProvider(getActivity()).get(CourseBookingViewModel.class);
     }
+
+
+    @Override
+
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        super.onViewCreated(view, savedInstanceState);
+
+        initial();
+//        cv2_tab_pesanan_kursus_fragment_panti.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+//
+//            }
+//        });
+//        cv1_tab_pesanan_kursus_fragment_panti.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+//
+//            }
+//        });
+//        cv3_tab_pesanan_kursus_fragment_panti.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.action_cariTutorFragment_to_courseBookingFragment);
+//
+//            }
+//        });
+
+    }
+
+    private void initial2() {}
 
     @Override
     public void onDetach() {
