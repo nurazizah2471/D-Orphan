@@ -27,6 +27,7 @@
                 android:id="@+id/toolbar_fragment_detail_rekomendasi_tutor"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
                 android:background="@color/white"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
@@ -80,7 +81,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Tanggal Penyelenggaraan"
-                            android:inputType="date" />
+                            android:inputType="date"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +106,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Nama Peserta Lomba"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -128,7 +131,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Nama Lomba"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/black" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,7 +183,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Penyelenggara"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -203,7 +208,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Jam Mulai"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -227,7 +233,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Jam Berakhir"
-                            android:inputType="time" />
+                            android:inputType="time"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -251,7 +258,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Kota Penyelenggaraan"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/black" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -277,7 +285,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Deskripsi Lomba"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -302,7 +311,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Tautan Lomba"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/black" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
